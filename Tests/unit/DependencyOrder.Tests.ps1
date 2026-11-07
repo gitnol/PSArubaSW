@@ -18,7 +18,7 @@ Param()
 BeforeAll {
     $script:UnitDir   = Split-Path -Parent $PSCommandPath
     $script:TestsRoot = Split-Path -Parent $UnitDir
-    $script:Helper    = Join-Path $TestsRoot 'Integration/_helpers/Use-DependencyOrder.ps1'
+    $script:Helper    = Join-Path $TestsRoot 'integration/_helpers/Use-DependencyOrder.ps1'
     . $script:Helper
 }
 

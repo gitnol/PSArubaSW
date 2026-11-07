@@ -40,7 +40,7 @@
 # Dependency declarations
 # ---------------------------------------------------------------------------
 # Each entry: '<family>' = @('parent-family-1', 'parent-family-2', ...)
-# Family names match Tests/Integration/<Family>.Tests.ps1 file stem.
+# Family names match Tests/integration/<Family>.Tests.ps1 file stem.
 $script:ArubaSWFamilyDeps = @{
     # Hierarchical resource dependencies (auto-derivable; mirrored from
     # REST_API_DEPENDENCIES.md section 1 / 2 -- kept in code for runtime use)
