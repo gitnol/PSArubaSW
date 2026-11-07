@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "uri": "dot1x/supplicant/stats",
+    "method": "GET",
+    "api_version": 8,
+    "status_code": 200,
+    "recorded_at": "2026-10-27",
+    "firmware": "ANONYMIZED",
+    "switch_model": "ANONYMIZED",
+    "anonymized": true,
+    "note": "Real answer, list cut to two ports (I36)."
+  },
+  "content": "{\"dot1x_supplicant_stats_element\":[{\"uri\":\"/dot1x/supplicant/1/stats\",\"port_id\":\"1\",\"source_mac_address\":\"\",\"tx_start\":null,\"tx_logoff\":null,\"tx_resp_id\":null,\"tx_resp\":null,\"rx_req_id\":null,\"rx_req\":null,\"rx_errors\":null},{\"uri\":\"/dot1x/supplicant/2/stats\",\"port_id\":\"2\",\"source_mac_address\":\"\",\"tx_start\":null,\"tx_logoff\":null,\"tx_resp_id\":null,\"tx_resp\":null,\"rx_req_id\":null,\"rx_req\":null,\"rx_errors\":null}],\"collection_result\":{\"total_elements_count\":52,\"filtered_elements_count\":52}}"
+}

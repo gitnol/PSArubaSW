@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "uri": "snmpv3/target_addresses/i36target",
+    "method": "PUT",
+    "api_version": 8,
+    "status_code": 200,
+    "recorded_at": "2026-10-27",
+    "firmware": "ANONYMIZED",
+    "switch_model": "ANONYMIZED",
+    "anonymized": true,
+    "note": "PUT echoes the object (I37)."
+  },
+  "content": "{\"uri\":\"/snmpv3/target_addresses/i36target\",\"target_address_name\":\"i36target\",\"dest_ip_address\":{\"version\":\"IAV_IP_V4\",\"octets\":\"198.51.100.78\"},\"tag_list\":[\"i36tag\",\"stacktrap\"],\"snmpv3_filter\":\"SF_NONE\",\"parameter_name\":\"i36param\",\"is_oobm\":false}"
+}

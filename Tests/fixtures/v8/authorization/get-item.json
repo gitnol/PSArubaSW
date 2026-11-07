@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "uri": "authorization",
+    "method": "GET",
+    "api_version": 8,
+    "status_code": 200,
+    "recorded_at": "2026-10-27",
+    "firmware": "ANONYMIZED",
+    "switch_model": "ANONYMIZED",
+    "anonymized": true,
+    "note": "Real answer of a 2540 (I39)."
+  },
+  "content": "{\"uri\":\"/authorization\",\"access_level\":\"AZL_ALL\",\"authorization_method\":\"AZM_NONE\",\"autz_uri_level\":\"AZL_ALL\",\"autz_uri_method\":\"AZM_NONE\"}"
+}

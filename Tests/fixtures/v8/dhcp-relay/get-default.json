@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "uri": "dhcp-relay",
+    "method": "GET",
+    "api_version": 8,
+    "status_code": 200,
+    "recorded_at": "2026-05-31",
+    "firmware": "ANONYMIZED",
+    "switch_model": "ANONYMIZED",
+    "anonymized": true,
+    "note": "Hand-crafted starter fixture (I18 repair). DHCP relay disabled by default."
+  },
+  "content": "{\"is_dhcp_relay_enabled\":false}"
+}

@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "uri": "snmpv3/notify_names",
+    "method": "GET",
+    "api_version": 8,
+    "status_code": 200,
+    "recorded_at": "2026-10-27",
+    "firmware": "ANONYMIZED",
+    "switch_model": "ANONYMIZED",
+    "anonymized": true,
+    "note": "Real answer of a 2540 (I37)."
+  },
+  "content": "{\"snmpv3_notify_element\":[{\"uri\":\"/snmpv3/notify_names/i36notify\",\"notify_name\":\"i36notify\",\"tagvalue\":\"i36tag\"},{\"uri\":\"/snmpv3/notify_names/stacktraps\",\"notify_name\":\"stacktraps\",\"tagvalue\":\"stacktrap\"}],\"collection_result\":{\"total_elements_count\":2,\"filtered_elements_count\":2}}"
+}

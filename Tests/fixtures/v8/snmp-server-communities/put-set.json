@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "uri": "snmp-server/communities/i36test",
+    "method": "PUT",
+    "api_version": 8,
+    "status_code": 200,
+    "recorded_at": "2026-10-27",
+    "firmware": "ANONYMIZED",
+    "switch_model": "ANONYMIZED",
+    "anonymized": true,
+    "note": "PUT echoes the object (I37)."
+  },
+  "content": "{\"uri\":\"/snmp-server/communities/i36test\",\"community_name\":\"i36test\",\"access_type\":\"UT_OPERATOR\",\"restricted\":true}"
+}

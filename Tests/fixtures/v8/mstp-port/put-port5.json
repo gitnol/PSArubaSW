@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "uri": "mstp/port/5",
+    "method": "PUT",
+    "api_version": 5,
+    "status_code": 200,
+    "recorded_at": "2026-10-27",
+    "firmware": "ANONYMIZED",
+    "switch_model": "ANONYMIZED",
+    "anonymized": true,
+    "note": "Recorded on a real switch (I35, 27.10.2026, REST v5). PUT echoes the port (root_guard true)."
+  },
+  "content": "{\"uri\":\"/mstp/port/5\",\"id\":\"5\",\"admin_status\":\"true\",\"root_guard\":\"true\"}"
+}

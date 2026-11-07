@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "uri": "dot1x/port_security/21",
+    "method": "PUT",
+    "api_version": 8,
+    "status_code": 200,
+    "recorded_at": "2026-10-27",
+    "firmware": "ANONYMIZED",
+    "switch_model": "ANONYMIZED",
+    "anonymized": true,
+    "note": "PUT echoes the complete object (I36, allow_mbv=false)."
+  },
+  "content": "{\"uri\":\"/dot1x/port_security/21\",\"port_id\":\"21\",\"controlled_direction\":\"DCD_BOTH\",\"allow_mbv\":false,\"allowed_mixed_users\":false,\"is_port_speed_vsa_enabled\":false}"
+}

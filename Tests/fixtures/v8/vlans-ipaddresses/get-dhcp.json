@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "uri": "vlans/701/ipaddresses",
+    "method": "GET",
+    "api_version": 8,
+    "status_code": 200,
+    "recorded_at": "2026-10-27",
+    "firmware": "ANONYMIZED",
+    "switch_model": "ANONYMIZED",
+    "anonymized": true,
+    "note": "Real answer of a 2540 (I38): DHCP address."
+  },
+  "content": "{\"collection_result\":{\"total_elements_count\":1,\"filtered_elements_count\":1},\"ip_address_subnet_element\":[{\"uri\":\"/vlans/701/ipaddresses/IAAM_DHCP-0.0.0.0\",\"ip_address_mode\":\"IAAM_DHCP\",\"vlan_id\":701}]}"
+}

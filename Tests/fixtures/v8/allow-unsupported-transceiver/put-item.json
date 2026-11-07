@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "uri": "allow_unsupported_transceiver",
+    "method": "PUT",
+    "api_version": 8,
+    "status_code": 200,
+    "recorded_at": "2026-10-27",
+    "firmware": "ANONYMIZED",
+    "switch_model": "ANONYMIZED",
+    "anonymized": true,
+    "note": "PUT answers with the complete object (I39)."
+  },
+  "content": "{\"uri\":\"/allow_unsupported_transceiver\",\"is_allow_unsupported_transceiver_enabled\":false}"
+}

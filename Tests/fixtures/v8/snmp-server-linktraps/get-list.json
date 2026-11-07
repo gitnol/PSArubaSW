@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "uri": "snmp-server/traps/linktraps",
+    "method": "GET",
+    "api_version": 8,
+    "status_code": 200,
+    "recorded_at": "2026-10-27",
+    "firmware": "ANONYMIZED",
+    "switch_model": "ANONYMIZED",
+    "anonymized": true,
+    "note": "Real answer, list cut to two ports (I37)."
+  },
+  "content": "{\"link_change_trap_element\":[{\"port_id\":\"1\",\"uri\":\"/snmp-server/traps/linktraps/1\",\"is_enabled\":true},{\"port_id\":\"2\",\"uri\":\"/snmp-server/traps/linktraps/2\",\"is_enabled\":true}],\"collection_result\":{\"total_elements_count\":2,\"filtered_elements_count\":2}}"
+}

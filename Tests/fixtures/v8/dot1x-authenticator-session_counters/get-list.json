@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "uri": "dot1x/authenticator/session_counters",
+    "method": "GET",
+    "api_version": 8,
+    "status_code": 200,
+    "recorded_at": "2026-10-27",
+    "firmware": "ANONYMIZED",
+    "switch_model": "ANONYMIZED",
+    "anonymized": true,
+    "note": "Real answer, list cut to two ports (I36)."
+  },
+  "content": "{\"dot1x_authenticator_session_counters_element\":[{\"uri\":\"/dot1x/authenticator/1/session_counters\",\"port_id\":\"1\",\"frames_in\":0,\"frames_out\":0,\"session_time\":0,\"session_status\":\"\",\"user\":\"\"},{\"uri\":\"/dot1x/authenticator/2/session_counters\",\"port_id\":\"2\",\"frames_in\":0,\"frames_out\":0,\"session_time\":0,\"session_status\":\"\",\"user\":\"\"}],\"collection_result\":{\"total_elements_count\":52,\"filtered_elements_count\":52}}"
+}

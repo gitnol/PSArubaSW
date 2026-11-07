@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "uri": "vlans/1/dhcp-relay",
+    "method": "PUT",
+    "api_version": 3,
+    "status_code": 200,
+    "recorded_at": "2026-10-27",
+    "firmware": "ANONYMIZED",
+    "switch_model": "ANONYMIZED",
+    "anonymized": true,
+    "note": "Real shape from a 2540 (YC.16.11.0010), REST v3. Two helper addresses (TEST-NET-2)."
+  },
+  "content": "{\"uri\":\"/vlans/1/dhcp-relay\",\"vlan_id\":1,\"dhcp_helper_addresses\":[{\"version\":\"IAV_IP_V4\",\"octets\":\"198.51.100.10\"},{\"version\":\"IAV_IP_V4\",\"octets\":\"198.51.100.11\"}]}"
+}

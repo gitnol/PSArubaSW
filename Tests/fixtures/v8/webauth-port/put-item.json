@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "uri": "webauth/port/21",
+    "method": "PUT",
+    "api_version": 8,
+    "status_code": 200,
+    "recorded_at": "2026-10-27",
+    "firmware": "ANONYMIZED",
+    "switch_model": "ANONYMIZED",
+    "anonymized": true,
+    "note": "PUT answers with the complete object (I39)."
+  },
+  "content": "{\"uri\":\"/webauth/port/21\",\"port_id\":\"21\",\"is_webauth_enabled\":false,\"unauthorized_vlan_id\":0,\"cached_reauth_period\":0,\"client_limit\":1,\"client_moves\":false,\"logoff_period\":300,\"max_requests\":3,\"max_retries\":3,\"quiet_period\":60,\"reauth_period\":0,\"reauthenticate\":false,\"redirect_url\":\"\",\"server_timeout\":300,\"ssl_login\":false}"
+}

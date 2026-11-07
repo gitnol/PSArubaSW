@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "uri": "snmpv3/users",
+    "method": "GET",
+    "api_version": 8,
+    "status_code": 200,
+    "recorded_at": "2026-10-27",
+    "firmware": "ANONYMIZED",
+    "switch_model": "ANONYMIZED",
+    "anonymized": true,
+    "note": "Real answer with SNMPv3 enabled: the user \"initial\" (I37)."
+  },
+  "content": "{\"snmpv3_user_element\":[{\"uri\":\"/snmpv3/users/initial\",\"user_name\":\"initial\",\"snmpv3_authentication_protocol\":\"SAP_NONE\",\"snmpv3_authentication_privacy_protocol\":\"SAPP_NONE\",\"authentication_password\":\"\",\"privacy_password\":\"\",\"snmpv3_v1_group\":\"SGT_NONE\",\"snmpv3_v2c_group\":\"SGT_NONE\",\"snmpv3_v3_group\":\"SGT_NONE\"}],\"collection_result\":{\"total_elements_count\":1,\"filtered_elements_count\":1}}"
+}

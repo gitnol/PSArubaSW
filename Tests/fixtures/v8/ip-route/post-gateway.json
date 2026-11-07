@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "uri": "ip-route",
+    "method": "POST",
+    "api_version": 8,
+    "status_code": 201,
+    "recorded_at": "2026-10-27",
+    "firmware": "ANONYMIZED",
+    "switch_model": "ANONYMIZED",
+    "anonymized": true,
+    "note": "POST echoes the new route (I40)."
+  },
+  "content": "{\"uri\":\"/ip-route/203.0.113.0-255.255.255.0-IRM_GATEWAY-198.51.100.254\",\"id\":\"203.0.113.0-255.255.255.0-IRM_GATEWAY-198.51.100.254\",\"destination\":{\"version\":\"IAV_IP_V4\",\"octets\":\"203.0.113.0\"},\"mask\":{\"version\":\"IAV_IP_V4\",\"octets\":\"255.255.255.0\"},\"ip_route_mode\":\"IRM_GATEWAY\",\"gateway\":{\"version\":\"IAV_IP_V4\",\"octets\":\"198.51.100.254\"},\"destination_vlan\":null,\"metric\":1,\"distance\":1,\"name\":\"\",\"tag\":null,\"bfd_ip_address\":null,\"logging\":null}"
+}

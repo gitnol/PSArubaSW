@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "uri": "system/status/switch",
+    "method": "GET",
+    "api_version": 8,
+    "status_code": 200,
+    "recorded_at": "2026-05-27",
+    "firmware": "ANONYMIZED",
+    "switch_model": "ANONYMIZED",
+    "anonymized": true,
+    "note": "Hand-crafted. Single (non-stacked) switch with one blade. Used by Connect-ArubaSW to set switch_type + product_number. I11/2: base_ethernet_address corrected from object to string format per openapi.yaml schema (which we trust here since this field was hand-guessed without a real recording)."
+  },
+  "content": "{\"switch_type\":\"ST_STANDALONE\",\"product_name\":\"ArubaOS-Switch ANONYMIZED-MODEL\",\"product_number\":\"ANONYMIZED-J9999A\",\"serial_number\":\"ANONYMIZED\",\"base_ethernet_address\":\"00:00:5E:00:53:00\",\"firmware_version\":\"ANONYMIZED.16.10.0019\",\"hostname\":\"test-switch\"}"
+}

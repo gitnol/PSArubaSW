@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "uri": "port-mirror",
+    "method": "POST",
+    "api_version": 8,
+    "status_code": 200,
+    "recorded_at": "2026-10-28",
+    "firmware": "ANONYMIZED",
+    "switch_model": "ANONYMIZED",
+    "anonymized": true,
+    "note": "POST answers with the complete session (I44)."
+  },
+  "content": "{\"uri\":\"/port-mirror/0\",\"session_id\":0,\"destination_port_id\":\"22\",\"source_port_id\":[\"21\",\"23\"]}"
+}

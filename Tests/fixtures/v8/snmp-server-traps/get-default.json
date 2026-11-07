@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "uri": "snmp-server/traps",
+    "method": "GET",
+    "api_version": 8,
+    "status_code": 200,
+    "recorded_at": "2026-10-27",
+    "firmware": "ANONYMIZED",
+    "switch_model": "ANONYMIZED",
+    "anonymized": true,
+    "note": "Real answer of a 2540 (I37)."
+  },
+  "content": "{\"uri\":\"/snmp-server/traps\",\"arp_protect\":\"STM_ENABLE\",\"auth_server_fail\":\"STM_ENABLE\",\"dhcp_server\":\"STM_ENABLE\",\"dhcp_snooping\":\"STM_ENABLE\",\"dhcpv6_snooping_errant_replies\":\"STM_ENABLE\",\"dhcpv6_snooping_out_of_resource\":\"STM_ENABLE\",\"dyn_ip_lockdown\":\"STM_ENABLE\",\"dyn_ipv6_ld_out_of_resources\":\"STM_ENABLE\",\"dyn_ipv6_ld_violations\":\"STM_ENABLE\",\"login_failure_mgr\":\"STM_ENABLE\",\"mac_count_notify\":\"STM_DISABLE\",\"nd_snooping_out_of_resources\":\"STM_ENABLE\",\"password_change_mgr\":\"STM_ENABLE\",\"port_security\":\"STM_ENABLE\",\"startup_config_change\":\"STM_DISABLE\",\"snmp_authentication\":\"SATM_EXTENDED\",\"mac_notify\":{\"mac_move_notify_mode\":\"STM_DISABLE\",\"mac_notify_mode\":\"STM_DISABLE\",\"trap_interval\":30},\"running_config_changes\":{\"running_conf_change_trap\":\"STM_DISABLE\",\"trap_interval\":0}}"
+}

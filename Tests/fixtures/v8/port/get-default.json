@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "uri": "ports",
+    "method": "GET",
+    "api_version": 8,
+    "status_code": 200,
+    "recorded_at": "2026-05-27",
+    "firmware": "ANONYMIZED",
+    "switch_model": "ANONYMIZED",
+    "anonymized": true,
+    "note": "Hand-crafted starter fixture (no real recording). 3 access ports, 1 trunk port."
+  },
+  "content": "{\"port_element\":[{\"uri\":\"/ports/1\",\"id\":\"1\",\"name\":\"\",\"is_port_enabled\":true,\"is_port_up\":true,\"config_mode\":\"PCM_AUTO\"},{\"uri\":\"/ports/2\",\"id\":\"2\",\"name\":\"uplink\",\"is_port_enabled\":true,\"is_port_up\":true,\"config_mode\":\"PCM_AUTO\"},{\"uri\":\"/ports/3\",\"id\":\"3\",\"name\":\"\",\"is_port_enabled\":true,\"is_port_up\":false,\"config_mode\":\"PCM_AUTO\"},{\"uri\":\"/ports/4\",\"id\":\"4\",\"name\":\"poe-test\",\"is_port_enabled\":false,\"is_port_up\":false,\"config_mode\":\"PCM_AUTO\"}],\"collection_result\":{\"total_elements_count\":4,\"filtered_elements_count\":4}}"
+}

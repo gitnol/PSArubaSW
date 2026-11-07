@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "uri": "dhcp-relay/option_82",
+    "method": "PUT",
+    "api_version": 8,
+    "status_code": 200,
+    "recorded_at": "2026-10-27",
+    "firmware": "ANONYMIZED",
+    "switch_model": "ANONYMIZED",
+    "anonymized": true,
+    "note": "Shape of the GET response; the enabled state itself was not recorded on a switch (hand-adjusted)."
+  },
+  "content": "{\"uri\":\"/dhcp-relay/option_82\",\"is_option82_enabled\":true,\"dhcp_relay_action\":\"DRO82A_REPLACE\",\"dhcp_relay_remote_id\":\"DRO82RI_MAC\",\"is_validation_enabled\":false}"
+}

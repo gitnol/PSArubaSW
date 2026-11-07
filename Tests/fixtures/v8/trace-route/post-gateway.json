@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "uri": "trace-route",
+    "method": "POST",
+    "api_version": 8,
+    "status_code": 200,
+    "recorded_at": "2026-10-27",
+    "firmware": "ANONYMIZED",
+    "switch_model": "ANONYMIZED",
+    "anonymized": true,
+    "note": "Real answer of a 2540 (I36); the gateway is answered on the first hop."
+  },
+  "content": "{\"ttl_data\":[{\"ttl_probe_data\":[{\"gateway\":{\"ip_address\":{\"version\":\"IAV_IP_V4\",\"octets\":\"198.51.100.1\"}},\"probe_time_in_millis\":2},{\"gateway\":{\"ip_address\":{\"version\":\"IAV_IP_V4\",\"octets\":\"198.51.100.1\"}},\"probe_time_in_millis\":1},{\"gateway\":{\"ip_address\":{\"version\":\"IAV_IP_V4\",\"octets\":\"198.51.100.1\"}},\"probe_time_in_millis\":1}]}],\"result\":\"TRR_OK\",\"uri\":\"/trace-route\"}"
+}

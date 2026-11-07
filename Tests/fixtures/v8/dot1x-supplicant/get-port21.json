@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "uri": "dot1x/supplicant/21",
+    "method": "GET",
+    "api_version": 8,
+    "status_code": 200,
+    "recorded_at": "2026-10-27",
+    "firmware": "ANONYMIZED",
+    "switch_model": "ANONYMIZED",
+    "anonymized": true,
+    "note": "Real answer of a 2540 (I36); password is empty."
+  },
+  "content": "{\"uri\":\"/dot1x/supplicant/21\",\"port_id\":\"21\",\"is_supplicant_enabled\":false,\"username\":\"\",\"password\":\"\",\"supplicant_state\":\"\",\"auth_timeout\":null,\"held_period\":null,\"start_period\":null,\"max_start\":null}"
+}

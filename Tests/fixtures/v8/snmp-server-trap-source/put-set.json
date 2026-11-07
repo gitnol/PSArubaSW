@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "uri": "snmp-server/trap-source",
+    "method": "PUT",
+    "api_version": 8,
+    "status_code": 200,
+    "recorded_at": "2026-10-27",
+    "firmware": "ANONYMIZED",
+    "switch_model": "ANONYMIZED",
+    "anonymized": true,
+    "note": "PUT echoes the object (I37, TSIP_LOOPBACK)."
+  },
+  "content": "{\"uri\":\"/snmp-server/trap-source\",\"ts_ip_policy\":\"TSIP_LOOPBACK\",\"loopback_interface\":1,\"ip_addr\":null}"
+}

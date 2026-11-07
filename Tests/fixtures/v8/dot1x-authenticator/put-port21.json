@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "uri": "dot1x/authenticator/21",
+    "method": "PUT",
+    "api_version": 8,
+    "status_code": 200,
+    "recorded_at": "2026-10-27",
+    "firmware": "ANONYMIZED",
+    "switch_model": "ANONYMIZED",
+    "anonymized": true,
+    "note": "PUT echoes the complete object (I36)."
+  },
+  "content": "{\"uri\":\"/dot1x/authenticator/21\",\"port_id\":\"21\",\"is_authenticator_enabled\":true,\"control\":\"DAPC_AUTO\",\"unauthorized_vlan_id\":0,\"client_limit\":4,\"quiet_period\":90,\"tx_period\":20,\"supplicant_timeout\":30,\"server_timeout\":300,\"max_requests\":3,\"reauth_period\":3600,\"authorized_vlan_id\":0,\"logoff_period\":300,\"unauth_period\":0,\"cached_reauth_period\":0}"
+}

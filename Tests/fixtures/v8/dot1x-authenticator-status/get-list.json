@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "uri": "dot1x/authenticator/status",
+    "method": "GET",
+    "api_version": 8,
+    "status_code": 200,
+    "recorded_at": "2026-10-27",
+    "firmware": "ANONYMIZED",
+    "switch_model": "ANONYMIZED",
+    "anonymized": true,
+    "note": "Real answer, list cut to two ports (I36)."
+  },
+  "content": "{\"dot1x_authenticator_status_element\":[{\"uri\":\"/dot1x/authenticator/1/status\",\"port_id\":\"1\",\"auths_or_guests\":\"\",\"unauth_clients\":\"\",\"untagged_vlan\":\"\",\"tagged_vlans\":\"\",\"port_cos\":\"\",\"in_limit_percentage\":\"\",\"radius_acl\":\"\",\"cntrl_dir\":\"\",\"port_mode\":\"\"},{\"uri\":\"/dot1x/authenticator/2/status\",\"port_id\":\"2\",\"auths_or_guests\":\"\",\"unauth_clients\":\"\",\"untagged_vlan\":\"\",\"tagged_vlans\":\"\",\"port_cos\":\"\",\"in_limit_percentage\":\"\",\"radius_acl\":\"\",\"cntrl_dir\":\"\",\"port_mode\":\"\"}],\"collection_result\":{\"total_elements_count\":52,\"filtered_elements_count\":52}}"
+}

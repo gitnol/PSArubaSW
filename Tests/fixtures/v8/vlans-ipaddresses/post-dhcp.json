@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "uri": "vlans/701/ipaddresses",
+    "method": "POST",
+    "api_version": 8,
+    "status_code": 201,
+    "recorded_at": "2026-10-27",
+    "firmware": "ANONYMIZED",
+    "switch_model": "ANONYMIZED",
+    "anonymized": true,
+    "note": "POST echoes the DHCP entry (I38)."
+  },
+  "content": "{\"uri\":\"/vlans/701/ipaddresses/IAAM_DHCP-0.0.0.0\",\"vlan_id\":701,\"ip_address_mode\":\"IAAM_DHCP\"}"
+}

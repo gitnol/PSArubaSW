@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "uri": "snmp-server/response-source",
+    "method": "GET",
+    "api_version": 8,
+    "status_code": 200,
+    "recorded_at": "2026-10-27",
+    "firmware": "ANONYMIZED",
+    "switch_model": "ANONYMIZED",
+    "anonymized": true,
+    "note": "Real answer of a 2540 (I37)."
+  },
+  "content": "{\"uri\":\"/snmp-server/response-source\",\"rs_ip_policy\":\"RSIP_DEFAULT\",\"loopback_interface\":null,\"ip_addr\":null}"
+}

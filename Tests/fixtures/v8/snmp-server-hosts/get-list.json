@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "uri": "snmp-server/hosts",
+    "method": "GET",
+    "api_version": 8,
+    "status_code": 200,
+    "recorded_at": "2026-10-27",
+    "firmware": "ANONYMIZED",
+    "switch_model": "ANONYMIZED",
+    "anonymized": true,
+    "note": "Real answer of a 2540 (I37)."
+  },
+  "content": "{\"snmp_server_host_element\":[{\"uri\":\"/snmp-server/hosts/198.51.100.77-i36test\",\"host_ip\":{\"version\":\"IAV_IP_V4\",\"octets\":\"198.51.100.77\"},\"community\":\"i36test\",\"use_oobm\":false,\"trap_level\":\"STL_NONE\",\"informs\":false,\"inform_retries\":3,\"inform_timeout\":15}],\"collection_result\":{\"total_elements_count\":1,\"filtered_elements_count\":1}}"
+}

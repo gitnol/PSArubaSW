@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "uri": "vlans",
+    "method": "GET",
+    "api_version": 8,
+    "status_code": 200,
+    "recorded_at": "2026-05-27",
+    "firmware": "ANONYMIZED",
+    "switch_model": "ANONYMIZED",
+    "anonymized": true,
+    "note": "Hand-crafted starter fixture (no real switch recording yet). Represents three VLANs incl. DEFAULT_VLAN and one Voice-VLAN."
+  },
+  "content": "{\"vlan_element\":[{\"uri\":\"/vlans/1\",\"vlan_id\":1,\"name\":\"DEFAULT_VLAN\",\"status\":\"VS_PORT_BASED\",\"type\":\"VT_STATIC\",\"is_voice_enabled\":false,\"is_jumbo_enabled\":false,\"is_dsnoop_enabled\":false,\"is_management_vlan\":true},{\"uri\":\"/vlans/85\",\"vlan_id\":85,\"name\":\"PowerArubaSW\",\"status\":\"VS_PORT_BASED\",\"type\":\"VT_STATIC\",\"is_voice_enabled\":true,\"is_jumbo_enabled\":false,\"is_dsnoop_enabled\":false,\"is_management_vlan\":false},{\"uri\":\"/vlans/100\",\"vlan_id\":100,\"name\":\"Voice\",\"status\":\"VS_PORT_BASED\",\"type\":\"VT_STATIC\",\"is_voice_enabled\":true,\"is_jumbo_enabled\":false,\"is_dsnoop_enabled\":false,\"is_management_vlan\":false}],\"collection_result\":{\"total_elements_count\":3,\"filtered_elements_count\":3}}"
+}

@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "uri": "mstp",
+    "method": "GET",
+    "api_version": 8,
+    "status_code": 200,
+    "recorded_at": "2026-06-01",
+    "firmware": "ANONYMIZED",
+    "switch_model": "ANONYMIZED",
+    "anonymized": true,
+    "note": "Hand-crafted starter fixture (I20). Default global MSTP: disabled, leere Region."
+  },
+  "content": "{\"is_mstp_enabled\":false,\"region_name\":\"\",\"region_revision\":0,\"max_hops\":20}"
+}

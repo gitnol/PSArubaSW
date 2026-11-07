@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "uri": "dot1x/supplicant",
+    "method": "GET",
+    "api_version": 8,
+    "status_code": 200,
+    "recorded_at": "2026-10-27",
+    "firmware": "ANONYMIZED",
+    "switch_model": "ANONYMIZED",
+    "anonymized": true,
+    "note": "Real answer, list cut to two ports (I36); password is empty."
+  },
+  "content": "{\"dot1x_supplicant_port_element\":[{\"uri\":\"/dot1x/supplicant/1\",\"port_id\":\"1\",\"is_supplicant_enabled\":false,\"username\":\"\",\"password\":\"***\",\"supplicant_state\":\"\",\"auth_timeout\":null,\"held_period\":null,\"start_period\":null,\"max_start\":null},{\"uri\":\"/dot1x/supplicant/2\",\"port_id\":\"2\",\"is_supplicant_enabled\":false,\"username\":\"\",\"password\":\"***\",\"supplicant_state\":\"\",\"auth_timeout\":null,\"held_period\":null,\"start_period\":null,\"max_start\":null}],\"collection_result\":{\"total_elements_count\":52,\"filtered_elements_count\":52}}"
+}

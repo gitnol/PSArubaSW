@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "uri": "vlans/1/dhcp-relay",
+    "method": "GET",
+    "api_version": 3,
+    "status_code": 200,
+    "recorded_at": "2026-10-27",
+    "firmware": "ANONYMIZED",
+    "switch_model": "ANONYMIZED",
+    "anonymized": true,
+    "note": "Real shape from a 2540 (YC.16.11.0010), REST v3; the resource does not exist from v4 on. Empty helper addresses."
+  },
+  "content": "{\"uri\":\"/vlans/1/dhcp-relay\",\"vlan_id\":1,\"dhcp_helper_addresses\":[]}"
+}

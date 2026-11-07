@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "uri": "file-transfer",
+    "method": "POST",
+    "api_version": 8,
+    "status_code": 200,
+    "recorded_at": "2026-10-28",
+    "firmware": "ANONYMIZED",
+    "switch_model": "ANONYMIZED",
+    "anonymized": true,
+    "note": "Upload of FTT_CONFIG to an http:// server (I41). The result of the transfer is only in the event log."
+  },
+  "content": "{\"message\":\"File transfer initiated\"}"
+}

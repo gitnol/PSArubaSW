@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "uri": "system/configuration-reset",
+    "method": "POST",
+    "api_version": 8,
+    "status_code": 200,
+    "recorded_at": "2026-06-01",
+    "firmware": "ANONYMIZED",
+    "switch_model": "ANONYMIZED",
+    "anonymized": true,
+    "note": "Hand-crafted starter fixture (I21). Switch quittiert vor Reboot mit minimalem Body -- '{}' ist die kleinst-valide Form gegen das additionalProperties:true-Schema. Bei einem echten Hardware-Recording wird das spaeter geschaerft."
+  },
+  "content": "{}"
+}

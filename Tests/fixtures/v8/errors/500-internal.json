@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "uri": "any",
+    "method": "any",
+    "api_version": 8,
+    "status_code": 500,
+    "recorded_at": "2026-05-27",
+    "firmware": "ANONYMIZED",
+    "switch_model": "ANONYMIZED",
+    "anonymized": true,
+    "note": "Generischer 500-Body. Verwendung im Test: zusammen mit einem Mock von Invoke-WebRequest, der einen Fehler wirft."
+  },
+  "content": "{\"message\":\"Internal server error processing request\"}"
+}

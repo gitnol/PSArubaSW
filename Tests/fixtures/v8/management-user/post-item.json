@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "uri": "management-user",
+    "method": "POST",
+    "api_version": 8,
+    "status_code": 201,
+    "recorded_at": "2026-10-27",
+    "firmware": "ANONYMIZED",
+    "switch_model": "ANONYMIZED",
+    "anonymized": true,
+    "note": "POST echoes the user, the password as ****** (I39)."
+  },
+  "content": "{\"type\":\"UT_OPERATOR\",\"name\":\"viewer\",\"password\":\"******\",\"password_type\":\"PET_PLAIN_TEXT\",\"uri\":\"/management-user/UT_OPERATOR\"}"
+}

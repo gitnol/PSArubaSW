@@ -1,0 +1,3679 @@
+{
+ "_hinweis": "Mutanten der Resource-Schicht (I34): Public-Dateien ohne eigene Testdatei. Einmal erzeugt (HTTP-Methode, URI, Body-Feldnamen, Parameter-gebunden-Pruefung, ShouldProcess, konstante Werte), dann von Hand gepflegt. Aufruf: pwsh -NoProfile -File Tools/Invoke-MutationCheck.ps1 -MutantsFile Tools/MutationCheck.Resource.json [-OnlyId R001,R002]. Nth = n-te Fundstelle von Find in der Datei.",
+ "Mutants": [
+  {
+   "Id": "R001",
+   "File": "PowerArubaSW/Public/Banner.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-method \"GET\"",
+   "Replace": "-method \"DELETE\"",
+   "Nth": 1,
+   "Note": "Get-ArubaSWBanner: HTTP-Methode vertauscht"
+  },
+  {
+   "Id": "R002",
+   "File": "PowerArubaSW/Public/Banner.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-method \"PUT\"",
+   "Replace": "-method \"GET\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWBanner: HTTP-Methode vertauscht"
+  },
+  {
+   "Id": "R003",
+   "File": "PowerArubaSW/Public/Banner.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$uri = \"",
+   "Replace": "$uri = \"x",
+   "Nth": 1,
+   "Note": "Get-ArubaSWBanner: URI verfaelscht"
+  },
+  {
+   "Id": "R004",
+   "File": "PowerArubaSW/Public/Banner.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$uri = \"",
+   "Replace": "$uri = \"x",
+   "Nth": 2,
+   "Note": "Set-ArubaSWBanner: URI verfaelscht"
+  },
+  {
+   "Id": "R005",
+   "File": "PowerArubaSW/Public/Banner.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"motd\"",
+   "Replace": "Add-Member -name \"motd_x\"",
+   "Nth": 1,
+   "Note": "Get-ArubaSWBanner: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R006",
+   "File": "PowerArubaSW/Public/Banner.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"exec\"",
+   "Replace": "Add-Member -name \"exec_x\"",
+   "Nth": 1,
+   "Note": "Get-ArubaSWBanner: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R007",
+   "File": "PowerArubaSW/Public/Banner.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"motd_base64_encoded\"",
+   "Replace": "Add-Member -name \"motd_base64_encoded_x\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWBanner: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R008",
+   "File": "PowerArubaSW/Public/Banner.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"exec_base64_encoded\"",
+   "Replace": "Add-Member -name \"exec_base64_encoded_x\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWBanner: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R009",
+   "File": "PowerArubaSW/Public/Banner.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"is_last_login_enabled\"",
+   "Replace": "Add-Member -name \"is_last_login_enabled_x\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWBanner: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R010",
+   "File": "PowerArubaSW/Public/Banner.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"is_last_login_enabled\"",
+   "Replace": "Add-Member -name \"is_last_login_enabled_x\"",
+   "Nth": 2,
+   "Note": "Set-ArubaSWBanner: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R011",
+   "File": "PowerArubaSW/Public/Banner.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('motd')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('motd'))",
+   "Nth": 1,
+   "Note": "Set-ArubaSWBanner: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R012",
+   "File": "PowerArubaSW/Public/Banner.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('exec')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('exec'))",
+   "Nth": 1,
+   "Note": "Set-ArubaSWBanner: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R013",
+   "File": "PowerArubaSW/Public/Banner.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('is_last_login_enabled')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('is_last_login_enabled'))",
+   "Nth": 1,
+   "Note": "Set-ArubaSWBanner: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R014",
+   "File": "PowerArubaSW/Public/Banner.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "if ($PSCmdlet.ShouldProcess($connection.server, 'Configure Banner')) {",
+   "Replace": "if ($true) {",
+   "Nth": 1,
+   "Note": "Set-ArubaSWBanner: ShouldProcess/-WhatIf ausgehebelt"
+  },
+  {
+   "Id": "R015",
+   "File": "PowerArubaSW/Public/DNS.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-method \"GET\"",
+   "Replace": "-method \"DELETE\"",
+   "Nth": 1,
+   "Note": "give: HTTP-Methode vertauscht"
+  },
+  {
+   "Id": "R016",
+   "File": "PowerArubaSW/Public/DNS.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-method \"PUT\"",
+   "Replace": "-method \"GET\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWDns: HTTP-Methode vertauscht"
+  },
+  {
+   "Id": "R017",
+   "File": "PowerArubaSW/Public/DNS.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-method \"PUT\"",
+   "Replace": "-method \"GET\"",
+   "Nth": 2,
+   "Note": "Remove-ArubaSWDns: HTTP-Methode vertauscht"
+  },
+  {
+   "Id": "R018",
+   "File": "PowerArubaSW/Public/DNS.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$uri = \"",
+   "Replace": "$uri = \"x",
+   "Nth": 1,
+   "Note": "give: URI verfaelscht"
+  },
+  {
+   "Id": "R019",
+   "File": "PowerArubaSW/Public/DNS.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$uri = \"",
+   "Replace": "$uri = \"x",
+   "Nth": 2,
+   "Note": "Set-ArubaSWDns: URI verfaelscht"
+  },
+  {
+   "Id": "R020",
+   "File": "PowerArubaSW/Public/DNS.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$uri = \"",
+   "Replace": "$uri = \"x",
+   "Nth": 3,
+   "Note": "Remove-ArubaSWDns: URI verfaelscht"
+  },
+  {
+   "Id": "R021",
+   "File": "PowerArubaSW/Public/DNS.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"dns_config_mode\"",
+   "Replace": "Add-Member -name \"dns_config_mode_x\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWDns: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R022",
+   "File": "PowerArubaSW/Public/DNS.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"version\"",
+   "Replace": "Add-Member -name \"version_x\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWDns: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R023",
+   "File": "PowerArubaSW/Public/DNS.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"octets\"",
+   "Replace": "Add-Member -name \"octets_x\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWDns: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R024",
+   "File": "PowerArubaSW/Public/DNS.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"server_1\"",
+   "Replace": "Add-Member -name \"server_1_x\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWDns: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R025",
+   "File": "PowerArubaSW/Public/DNS.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"server_1\"",
+   "Replace": "Add-Member -name \"server_1_x\"",
+   "Nth": 2,
+   "Note": "Set-ArubaSWDns: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R026",
+   "File": "PowerArubaSW/Public/DNS.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"version\"",
+   "Replace": "Add-Member -name \"version_x\"",
+   "Nth": 2,
+   "Note": "Set-ArubaSWDns: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R027",
+   "File": "PowerArubaSW/Public/DNS.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"octets\"",
+   "Replace": "Add-Member -name \"octets_x\"",
+   "Nth": 2,
+   "Note": "Set-ArubaSWDns: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R028",
+   "File": "PowerArubaSW/Public/DNS.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"server_2\"",
+   "Replace": "Add-Member -name \"server_2_x\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWDns: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R029",
+   "File": "PowerArubaSW/Public/DNS.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"server_2\"",
+   "Replace": "Add-Member -name \"server_2_x\"",
+   "Nth": 2,
+   "Note": "Set-ArubaSWDns: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R030",
+   "File": "PowerArubaSW/Public/DNS.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"dns_domain_names\"",
+   "Replace": "Add-Member -name \"dns_domain_names_x\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWDns: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R031",
+   "File": "PowerArubaSW/Public/DNS.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"dns_config_mode\"",
+   "Replace": "Add-Member -name \"dns_config_mode_x\"",
+   "Nth": 2,
+   "Note": "Remove-ArubaSWDns: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R032",
+   "File": "PowerArubaSW/Public/DNS.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('server1')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('server1'))",
+   "Nth": 1,
+   "Note": "Set-ArubaSWDns: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R033",
+   "File": "PowerArubaSW/Public/DNS.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('server2')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('server2'))",
+   "Nth": 1,
+   "Note": "Set-ArubaSWDns: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R034",
+   "File": "PowerArubaSW/Public/DNS.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('domain')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('domain'))",
+   "Nth": 1,
+   "Note": "Set-ArubaSWDns: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R035",
+   "File": "PowerArubaSW/Public/DNS.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "if ($PSCmdlet.ShouldProcess($connection.server, 'Configure DNS')) {",
+   "Replace": "if ($true) {",
+   "Nth": 1,
+   "Note": "Set-ArubaSWDns: ShouldProcess/-WhatIf ausgehebelt"
+  },
+  {
+   "Id": "R036",
+   "File": "PowerArubaSW/Public/DNS.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "if ($PSCmdlet.ShouldProcess($connection.server, 'Remove DNS')) {",
+   "Replace": "if ($true) {",
+   "Nth": 1,
+   "Note": "Remove-ArubaSWDns: ShouldProcess/-WhatIf ausgehebelt"
+  },
+  {
+   "Id": "R037",
+   "File": "PowerArubaSW/Public/DNS.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-Value \"IAV_IP_V4\"",
+   "Replace": "-Value \"IAV_IP_V4_x\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWDns: Konstanter Body-Wert verfaelscht"
+  },
+  {
+   "Id": "R038",
+   "File": "PowerArubaSW/Public/DNS.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-Value \"IAV_IP_V4\"",
+   "Replace": "-Value \"IAV_IP_V4_x\"",
+   "Nth": 2,
+   "Note": "Set-ArubaSWDns: Konstanter Body-Wert verfaelscht"
+  },
+  {
+   "Id": "R039",
+   "File": "PowerArubaSW/Public/DNS.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-Value \"DCM_DISABLED\"",
+   "Replace": "-Value \"DCM_DISABLED_x\"",
+   "Nth": 1,
+   "Note": "Remove-ArubaSWDns: Konstanter Body-Wert verfaelscht"
+  },
+  {
+   "Id": "R040",
+   "File": "PowerArubaSW/Public/DNS.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$mode_status = \"DCM_DHCP\"",
+   "Replace": "$mode_status = \"DCM_DHCP_X\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWDns: Zugeordnete Konstante verfaelscht"
+  },
+  {
+   "Id": "R041",
+   "File": "PowerArubaSW/Public/DNS.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$mode_status = \"DCM_MANUAL\"",
+   "Replace": "$mode_status = \"DCM_MANUAL_X\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWDns: Zugeordnete Konstante verfaelscht"
+  },
+  {
+   "Id": "R042",
+   "File": "PowerArubaSW/Public/IPAddress.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-method \"GET\"",
+   "Replace": "-method \"DELETE\"",
+   "Nth": 1,
+   "Note": "give: HTTP-Methode vertauscht"
+  },
+  {
+   "Id": "R043",
+   "File": "PowerArubaSW/Public/IPAddress.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$uri = \"",
+   "Replace": "$uri = \"x",
+   "Nth": 1,
+   "Note": "give: URI verfaelscht"
+  },
+  {
+   "Id": "R044",
+   "File": "PowerArubaSW/Public/LACP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-method \"GET\"",
+   "Replace": "-method \"DELETE\"",
+   "Nth": 1,
+   "Note": "Get-ArubaSWLACP: HTTP-Methode vertauscht"
+  },
+  {
+   "Id": "R045",
+   "File": "PowerArubaSW/Public/LACP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-method \"POST\"",
+   "Replace": "-method \"GET\"",
+   "Nth": 1,
+   "Note": "Add-ArubaSWLACP: HTTP-Methode vertauscht"
+  },
+  {
+   "Id": "R046",
+   "File": "PowerArubaSW/Public/LACP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-method \"DELETE\"",
+   "Replace": "-method \"GET\"",
+   "Nth": 1,
+   "Note": "Remove-ArubaSWLACP: HTTP-Methode vertauscht"
+  },
+  {
+   "Id": "R047",
+   "File": "PowerArubaSW/Public/LACP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$uri = \"",
+   "Replace": "$uri = \"x",
+   "Nth": 1,
+   "Note": "Get-ArubaSWLACP: URI verfaelscht"
+  },
+  {
+   "Id": "R048",
+   "File": "PowerArubaSW/Public/LACP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$uri = \"",
+   "Replace": "$uri = \"x",
+   "Nth": 2,
+   "Note": "Add-ArubaSWLACP: URI verfaelscht"
+  },
+  {
+   "Id": "R049",
+   "File": "PowerArubaSW/Public/LACP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$uri = \"",
+   "Replace": "$uri = \"x",
+   "Nth": 3,
+   "Note": "Remove-ArubaSWLACP: URI verfaelscht"
+  },
+  {
+   "Id": "R050",
+   "File": "PowerArubaSW/Public/LACP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"port_id\"",
+   "Replace": "Add-Member -name \"port_id_x\"",
+   "Nth": 1,
+   "Note": "Add-ArubaSWLACP: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R051",
+   "File": "PowerArubaSW/Public/LACP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"trunk_group\"",
+   "Replace": "Add-Member -name \"trunk_group_x\"",
+   "Nth": 1,
+   "Note": "Add-ArubaSWLACP: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R052",
+   "File": "PowerArubaSW/Public/LACP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"port_id\"",
+   "Replace": "Add-Member -name \"port_id_x\"",
+   "Nth": 2,
+   "Note": "Remove-ArubaSWLACP: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R053",
+   "File": "PowerArubaSW/Public/LACP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"trunk_group\"",
+   "Replace": "Add-Member -name \"trunk_group_x\"",
+   "Nth": 2,
+   "Note": "Remove-ArubaSWLACP: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R054",
+   "File": "PowerArubaSW/Public/LACP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "if ($PSCmdlet.ShouldProcess($id, 'Remove LACP')) {",
+   "Replace": "if ($true) {",
+   "Nth": 1,
+   "Note": "Remove-ArubaSWLACP: ShouldProcess/-WhatIf ausgehebelt"
+  },
+  {
+   "Id": "R055",
+   "File": "PowerArubaSW/Public/LLDP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-method \"GET\"",
+   "Replace": "-method \"DELETE\"",
+   "Nth": 1,
+   "Note": "Get-ArubaSWLLDPRemote: HTTP-Methode vertauscht"
+  },
+  {
+   "Id": "R056",
+   "File": "PowerArubaSW/Public/LLDP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-method \"GET\"",
+   "Replace": "-method \"DELETE\"",
+   "Nth": 2,
+   "Note": "Get-ArubaSWLLDPGlobalStatus: HTTP-Methode vertauscht"
+  },
+  {
+   "Id": "R057",
+   "File": "PowerArubaSW/Public/LLDP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-method \"PUT\"",
+   "Replace": "-method \"GET\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWLLDPGlobalStatus: HTTP-Methode vertauscht"
+  },
+  {
+   "Id": "R058",
+   "File": "PowerArubaSW/Public/LLDP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-method \"GET\"",
+   "Replace": "-method \"DELETE\"",
+   "Nth": 3,
+   "Note": "Get-ArubaSWLLDPNeighborStats: HTTP-Methode vertauscht"
+  },
+  {
+   "Id": "R059",
+   "File": "PowerArubaSW/Public/LLDP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-method \"GET\"",
+   "Replace": "-method \"DELETE\"",
+   "Nth": 4,
+   "Note": "Get-ArubaSWLLDPPortStats: HTTP-Methode vertauscht"
+  },
+  {
+   "Id": "R060",
+   "File": "PowerArubaSW/Public/LLDP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$uri = \"",
+   "Replace": "$uri = \"x",
+   "Nth": 1,
+   "Note": "Get-ArubaSWLLDPRemote: URI verfaelscht"
+  },
+  {
+   "Id": "R061",
+   "File": "PowerArubaSW/Public/LLDP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$uri = \"",
+   "Replace": "$uri = \"x",
+   "Nth": 2,
+   "Note": "Get-ArubaSWLLDPGlobalStatus: URI verfaelscht"
+  },
+  {
+   "Id": "R062",
+   "File": "PowerArubaSW/Public/LLDP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$uri = \"",
+   "Replace": "$uri = \"x",
+   "Nth": 3,
+   "Note": "Set-ArubaSWLLDPGlobalStatus: URI verfaelscht"
+  },
+  {
+   "Id": "R063",
+   "File": "PowerArubaSW/Public/LLDP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$uri = \"",
+   "Replace": "$uri = \"x",
+   "Nth": 4,
+   "Note": "Get-ArubaSWLLDPNeighborStats: URI verfaelscht"
+  },
+  {
+   "Id": "R064",
+   "File": "PowerArubaSW/Public/LLDP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$uri = \"",
+   "Replace": "$uri = \"x",
+   "Nth": 5,
+   "Note": "Get-ArubaSWLLDPPortStats: URI verfaelscht"
+  },
+  {
+   "Id": "R065",
+   "File": "PowerArubaSW/Public/LLDP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"admin_status\"",
+   "Replace": "Add-Member -name \"admin_status_x\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWLLDPGlobalStatus: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R066",
+   "File": "PowerArubaSW/Public/LLDP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"transmit_interval\"",
+   "Replace": "Add-Member -name \"transmit_interval_x\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWLLDPGlobalStatus: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R067",
+   "File": "PowerArubaSW/Public/LLDP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"hold_time_multiplier\"",
+   "Replace": "Add-Member -name \"hold_time_multiplier_x\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWLLDPGlobalStatus: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R068",
+   "File": "PowerArubaSW/Public/LLDP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"fast_start_count\"",
+   "Replace": "Add-Member -name \"fast_start_count_x\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWLLDPGlobalStatus: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R069",
+   "File": "PowerArubaSW/Public/LLDP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('enable')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('enable'))",
+   "Nth": 1,
+   "Note": "Set-ArubaSWLLDPGlobalStatus: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R070",
+   "File": "PowerArubaSW/Public/LLDP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('transmit')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('transmit'))",
+   "Nth": 1,
+   "Note": "Set-ArubaSWLLDPGlobalStatus: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R071",
+   "File": "PowerArubaSW/Public/LLDP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('holdtime')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('holdtime'))",
+   "Nth": 1,
+   "Note": "Set-ArubaSWLLDPGlobalStatus: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R072",
+   "File": "PowerArubaSW/Public/LLDP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('faststart')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('faststart'))",
+   "Nth": 1,
+   "Note": "Set-ArubaSWLLDPGlobalStatus: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R073",
+   "File": "PowerArubaSW/Public/LLDP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "if ($PSCmdlet.ShouldProcess($connection.server, 'Configure LLDP Global Status')) {",
+   "Replace": "if ($true) {",
+   "Nth": 1,
+   "Note": "Set-ArubaSWLLDPGlobalStatus: ShouldProcess/-WhatIf ausgehebelt"
+  },
+  {
+   "Id": "R074",
+   "File": "PowerArubaSW/Public/LLDP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$enable_status = \"LLAS_ENABLED\"",
+   "Replace": "$enable_status = \"LLAS_ENABLED_X\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWLLDPGlobalStatus: Zugeordnete Konstante verfaelscht"
+  },
+  {
+   "Id": "R075",
+   "File": "PowerArubaSW/Public/LLDP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$enable_status = \"LLAS_DISABLED\"",
+   "Replace": "$enable_status = \"LLAS_DISABLED_X\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWLLDPGlobalStatus: Zugeordnete Konstante verfaelscht"
+  },
+  {
+   "Id": "R076",
+   "File": "PowerArubaSW/Public/Led.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-method \"GET\"",
+   "Replace": "-method \"DELETE\"",
+   "Nth": 1,
+   "Note": "Get-ArubaSWLed: HTTP-Methode vertauscht"
+  },
+  {
+   "Id": "R077",
+   "File": "PowerArubaSW/Public/Led.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-method \"POST\"",
+   "Replace": "-method \"GET\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWLed: HTTP-Methode vertauscht"
+  },
+  {
+   "Id": "R078",
+   "File": "PowerArubaSW/Public/Led.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$uri = \"",
+   "Replace": "$uri = \"x",
+   "Nth": 1,
+   "Note": "Get-ArubaSWLed: URI verfaelscht"
+  },
+  {
+   "Id": "R079",
+   "File": "PowerArubaSW/Public/Led.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$uri = \"",
+   "Replace": "$uri = \"x",
+   "Nth": 2,
+   "Note": "Set-ArubaSWLed: URI verfaelscht"
+  },
+  {
+   "Id": "R080",
+   "File": "PowerArubaSW/Public/Led.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"led_blink_status\"",
+   "Replace": "Add-Member -name \"led_blink_status_x\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWLed: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R081",
+   "File": "PowerArubaSW/Public/Led.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"duration_in_minutes\"",
+   "Replace": "Add-Member -name \"duration_in_minutes_x\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWLed: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R082",
+   "File": "PowerArubaSW/Public/Led.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"when\"",
+   "Replace": "Add-Member -name \"when_x\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWLed: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R083",
+   "File": "PowerArubaSW/Public/Led.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"member_id\"",
+   "Replace": "Add-Member -name \"member_id_x\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWLed: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R084",
+   "File": "PowerArubaSW/Public/Led.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('status')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('status'))",
+   "Nth": 1,
+   "Note": "Set-ArubaSWLed: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R085",
+   "File": "PowerArubaSW/Public/Led.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('duration')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('duration'))",
+   "Nth": 1,
+   "Note": "Set-ArubaSWLed: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R086",
+   "File": "PowerArubaSW/Public/Led.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('when')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('when'))",
+   "Nth": 1,
+   "Note": "Set-ArubaSWLed: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R087",
+   "File": "PowerArubaSW/Public/Led.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('member_id')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('member_id'))",
+   "Nth": 1,
+   "Note": "Set-ArubaSWLed: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R088",
+   "File": "PowerArubaSW/Public/Led.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "if ($PSCmdlet.ShouldProcess($connection.server, 'Configure Led')) {",
+   "Replace": "if ($true) {",
+   "Nth": 1,
+   "Note": "Set-ArubaSWLed: ShouldProcess/-WhatIf ausgehebelt"
+  },
+  {
+   "Id": "R089",
+   "File": "PowerArubaSW/Public/Led.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$led_blink_status = \"LS_ON\"",
+   "Replace": "$led_blink_status = \"LS_ON_X\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWLed: Zugeordnete Konstante verfaelscht"
+  },
+  {
+   "Id": "R090",
+   "File": "PowerArubaSW/Public/Led.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$led_blink_status = \"LS_OFF\"",
+   "Replace": "$led_blink_status = \"LS_OFF_X\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWLed: Zugeordnete Konstante verfaelscht"
+  },
+  {
+   "Id": "R091",
+   "File": "PowerArubaSW/Public/Led.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$led_blink_status = \"LS_BLINK\"",
+   "Replace": "$led_blink_status = \"LS_BLINK_X\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWLed: Zugeordnete Konstante verfaelscht"
+  },
+  {
+   "Id": "R092",
+   "File": "PowerArubaSW/Public/Led.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$when_blink = \"LBT_NOW\"",
+   "Replace": "$when_blink = \"LBT_NOW_X\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWLed: Zugeordnete Konstante verfaelscht"
+  },
+  {
+   "Id": "R093",
+   "File": "PowerArubaSW/Public/Led.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$when_blink = \"LBT_STARTUP\"",
+   "Replace": "$when_blink = \"LBT_STARTUP_X\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWLed: Zugeordnete Konstante verfaelscht"
+  },
+  {
+   "Id": "R094",
+   "File": "PowerArubaSW/Public/MacTable.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-method \"GET\"",
+   "Replace": "-method \"DELETE\"",
+   "Nth": 1,
+   "Note": "Get-ArubaSWMacTable: HTTP-Methode vertauscht"
+  },
+  {
+   "Id": "R095",
+   "File": "PowerArubaSW/Public/MacTable.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$uri = \"",
+   "Replace": "$uri = \"x",
+   "Nth": 1,
+   "Note": "Get-ArubaSWMacTable: URI verfaelscht"
+  },
+  {
+   "Id": "R096",
+   "File": "PowerArubaSW/Public/MacTable.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$uri = \"",
+   "Replace": "$uri = \"x",
+   "Nth": 2,
+   "Note": "Get-ArubaSWMacTable: URI verfaelscht"
+  },
+  {
+   "Id": "R097",
+   "File": "PowerArubaSW/Public/MacTable.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$uri = \"",
+   "Replace": "$uri = \"x",
+   "Nth": 3,
+   "Note": "Get-ArubaSWMacTable: URI verfaelscht"
+  },
+  {
+   "Id": "R098",
+   "File": "PowerArubaSW/Public/MacTable.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$uri = \"",
+   "Replace": "$uri = \"x",
+   "Nth": 4,
+   "Note": "Get-ArubaSWMacTable: URI verfaelscht"
+  },
+  {
+   "Id": "R099",
+   "File": "PowerArubaSW/Public/MacTable.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('port_id')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('port_id'))",
+   "Nth": 1,
+   "Note": "Get-ArubaSWMacTable: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R100",
+   "File": "PowerArubaSW/Public/MacTable.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('vlan_id')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('vlan_id'))",
+   "Nth": 1,
+   "Note": "Get-ArubaSWMacTable: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R101",
+   "File": "PowerArubaSW/Public/MacTable.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('mac_address')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('mac_address'))",
+   "Nth": 1,
+   "Note": "Get-ArubaSWMacTable: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R102",
+   "File": "PowerArubaSW/Public/MacTable.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('mac_address')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('mac_address'))",
+   "Nth": 2,
+   "Note": "Get-ArubaSWMacTable: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R103",
+   "File": "PowerArubaSW/Public/Modules.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-method \"GET\"",
+   "Replace": "-method \"DELETE\"",
+   "Nth": 1,
+   "Note": "Get-ArubaSWModules: HTTP-Methode vertauscht"
+  },
+  {
+   "Id": "R104",
+   "File": "PowerArubaSW/Public/Modules.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$uri = \"",
+   "Replace": "$uri = \"x",
+   "Nth": 1,
+   "Note": "Get-ArubaSWModules: URI verfaelscht"
+  },
+  {
+   "Id": "R105",
+   "File": "PowerArubaSW/Public/Ping.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-method \"POST\"",
+   "Replace": "-method \"GET\"",
+   "Nth": 1,
+   "Note": "Test-ArubaSWPing: HTTP-Methode vertauscht"
+  },
+  {
+   "Id": "R106",
+   "File": "PowerArubaSW/Public/Ping.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$uri = \"",
+   "Replace": "$uri = \"x",
+   "Nth": 1,
+   "Note": "Test-ArubaSWPing: URI verfaelscht"
+  },
+  {
+   "Id": "R107",
+   "File": "PowerArubaSW/Public/Ping.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"version\"",
+   "Replace": "Add-Member -name \"version_x\"",
+   "Nth": 1,
+   "Note": "Test-ArubaSWPing: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R108",
+   "File": "PowerArubaSW/Public/Ping.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"octets\"",
+   "Replace": "Add-Member -name \"octets_x\"",
+   "Nth": 1,
+   "Note": "Test-ArubaSWPing: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R109",
+   "File": "PowerArubaSW/Public/Ping.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"ip_address\"",
+   "Replace": "Add-Member -name \"ip_address_x\"",
+   "Nth": 1,
+   "Note": "Test-ArubaSWPing: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R110",
+   "File": "PowerArubaSW/Public/Ping.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"hostname\"",
+   "Replace": "Add-Member -name \"hostname_x\"",
+   "Nth": 1,
+   "Note": "Test-ArubaSWPing: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R111",
+   "File": "PowerArubaSW/Public/Ping.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"destination\"",
+   "Replace": "Add-Member -name \"destination_x\"",
+   "Nth": 1,
+   "Note": "Test-ArubaSWPing: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R112",
+   "File": "PowerArubaSW/Public/Ping.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('ipv4_address')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('ipv4_address'))",
+   "Nth": 1,
+   "Note": "Test-ArubaSWPing: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R113",
+   "File": "PowerArubaSW/Public/Ping.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('hostname')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('hostname'))",
+   "Nth": 1,
+   "Note": "Test-ArubaSWPing: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R114",
+   "File": "PowerArubaSW/Public/Ping.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-Value \"IAV_IP_V4\"",
+   "Replace": "-Value \"IAV_IP_V4_x\"",
+   "Nth": 1,
+   "Note": "Test-ArubaSWPing: Konstanter Body-Wert verfaelscht"
+  },
+  {
+   "Id": "R115",
+   "File": "PowerArubaSW/Public/Poe.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-method \"GET\"",
+   "Replace": "-method \"DELETE\"",
+   "Nth": 1,
+   "Note": "Get-ArubaSWPoE: HTTP-Methode vertauscht"
+  },
+  {
+   "Id": "R116",
+   "File": "PowerArubaSW/Public/Poe.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-method \"PUT\"",
+   "Replace": "-method \"GET\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWPoE: HTTP-Methode vertauscht"
+  },
+  {
+   "Id": "R117",
+   "File": "PowerArubaSW/Public/Poe.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-method \"GET\"",
+   "Replace": "-method \"DELETE\"",
+   "Nth": 2,
+   "Note": "Get-ArubaSWPoEStats: HTTP-Methode vertauscht"
+  },
+  {
+   "Id": "R118",
+   "File": "PowerArubaSW/Public/Poe.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$uri = \"",
+   "Replace": "$uri = \"x",
+   "Nth": 1,
+   "Note": "Get-ArubaSWPoE: URI verfaelscht"
+  },
+  {
+   "Id": "R119",
+   "File": "PowerArubaSW/Public/Poe.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$uri = \"",
+   "Replace": "$uri = \"x",
+   "Nth": 2,
+   "Note": "Get-ArubaSWPoE: URI verfaelscht"
+  },
+  {
+   "Id": "R120",
+   "File": "PowerArubaSW/Public/Poe.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$uri = \"",
+   "Replace": "$uri = \"x",
+   "Nth": 3,
+   "Note": "Set-ArubaSWPoE: URI verfaelscht"
+  },
+  {
+   "Id": "R121",
+   "File": "PowerArubaSW/Public/Poe.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$uri = \"",
+   "Replace": "$uri = \"x",
+   "Nth": 4,
+   "Note": "Get-ArubaSWPoEStats: URI verfaelscht"
+  },
+  {
+   "Id": "R122",
+   "File": "PowerArubaSW/Public/Poe.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$uri = \"",
+   "Replace": "$uri = \"x",
+   "Nth": 5,
+   "Note": "Get-ArubaSWPoEStats: URI verfaelscht"
+  },
+  {
+   "Id": "R123",
+   "File": "PowerArubaSW/Public/Poe.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"is_poe_enabled\"",
+   "Replace": "Add-Member -name \"is_poe_enabled_x\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWPoE: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R124",
+   "File": "PowerArubaSW/Public/Poe.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"is_poe_enabled\"",
+   "Replace": "Add-Member -name \"is_poe_enabled_x\"",
+   "Nth": 2,
+   "Note": "Set-ArubaSWPoE: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R125",
+   "File": "PowerArubaSW/Public/Poe.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"poe_priority\"",
+   "Replace": "Add-Member -name \"poe_priority_x\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWPoE: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R126",
+   "File": "PowerArubaSW/Public/Poe.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"poe_allocation_method\"",
+   "Replace": "Add-Member -name \"poe_allocation_method_x\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWPoE: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R127",
+   "File": "PowerArubaSW/Public/Poe.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"allocated_power_in_watts\"",
+   "Replace": "Add-Member -name \"allocated_power_in_watts_x\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWPoE: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R128",
+   "File": "PowerArubaSW/Public/Poe.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"port_configured_type\"",
+   "Replace": "Add-Member -name \"port_configured_type_x\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWPoE: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R129",
+   "File": "PowerArubaSW/Public/Poe.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"pre_standard_detect_enabled\"",
+   "Replace": "Add-Member -name \"pre_standard_detect_enabled_x\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWPoE: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R130",
+   "File": "PowerArubaSW/Public/Poe.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"pre_standard_detect_enabled\"",
+   "Replace": "Add-Member -name \"pre_standard_detect_enabled_x\"",
+   "Nth": 2,
+   "Note": "Set-ArubaSWPoE: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R131",
+   "File": "PowerArubaSW/Public/Poe.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('is_poe_enabled')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('is_poe_enabled'))",
+   "Nth": 1,
+   "Note": "Set-ArubaSWPoE: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R132",
+   "File": "PowerArubaSW/Public/Poe.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('poe_priority')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('poe_priority'))",
+   "Nth": 1,
+   "Note": "Set-ArubaSWPoE: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R133",
+   "File": "PowerArubaSW/Public/Poe.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('poe_allocation_method')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('poe_allocation_method'))",
+   "Nth": 1,
+   "Note": "Set-ArubaSWPoE: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R134",
+   "File": "PowerArubaSW/Public/Poe.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('allocated_power_in_watts')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('allocated_power_in_watts'))",
+   "Nth": 1,
+   "Note": "Set-ArubaSWPoE: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R135",
+   "File": "PowerArubaSW/Public/Poe.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('port_configured_type')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('port_configured_type'))",
+   "Nth": 1,
+   "Note": "Set-ArubaSWPoE: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R136",
+   "File": "PowerArubaSW/Public/Poe.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('pre_standard_detect_enabled')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('pre_standard_detect_enabled'))",
+   "Nth": 1,
+   "Note": "Set-ArubaSWPoE: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R137",
+   "File": "PowerArubaSW/Public/Poe.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "if ($PSCmdlet.ShouldProcess(\"\", 'Configure Banner')) {",
+   "Replace": "if ($true) {",
+   "Nth": 1,
+   "Note": "Set-ArubaSWPoE: ShouldProcess/-WhatIf ausgehebelt"
+  },
+  {
+   "Id": "R138",
+   "File": "PowerArubaSW/Public/Poe.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$priority = \"PPP_LOW\"",
+   "Replace": "$priority = \"PPP_LOW_X\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWPoE: Zugeordnete Konstante verfaelscht"
+  },
+  {
+   "Id": "R139",
+   "File": "PowerArubaSW/Public/Poe.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$priority = \"PPP_HIGH\"",
+   "Replace": "$priority = \"PPP_HIGH_X\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWPoE: Zugeordnete Konstante verfaelscht"
+  },
+  {
+   "Id": "R140",
+   "File": "PowerArubaSW/Public/Poe.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$priority = \"PPP_CRITICAL\"",
+   "Replace": "$priority = \"PPP_CRITICAL_X\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWPoE: Zugeordnete Konstante verfaelscht"
+  },
+  {
+   "Id": "R141",
+   "File": "PowerArubaSW/Public/Poe.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$allocation_method = \"PPAM_USAGE\"",
+   "Replace": "$allocation_method = \"PPAM_USAGE_X\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWPoE: Zugeordnete Konstante verfaelscht"
+  },
+  {
+   "Id": "R142",
+   "File": "PowerArubaSW/Public/Poe.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$allocation_method = \"PPAM_CLASS\"",
+   "Replace": "$allocation_method = \"PPAM_CLASS_X\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWPoE: Zugeordnete Konstante verfaelscht"
+  },
+  {
+   "Id": "R143",
+   "File": "PowerArubaSW/Public/Poe.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$allocation_method = \"PPAM_VALUE\"",
+   "Replace": "$allocation_method = \"PPAM_VALUE_X\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWPoE: Zugeordnete Konstante verfaelscht"
+  },
+  {
+   "Id": "R144",
+   "File": "PowerArubaSW/Public/Port.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-method \"GET\"",
+   "Replace": "-method \"DELETE\"",
+   "Nth": 1,
+   "Note": "Get-ArubaSWPort: HTTP-Methode vertauscht"
+  },
+  {
+   "Id": "R145",
+   "File": "PowerArubaSW/Public/Port.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-method \"GET\"",
+   "Replace": "-method \"DELETE\"",
+   "Nth": 2,
+   "Note": "Get-ArubaSWPortStatistics: HTTP-Methode vertauscht"
+  },
+  {
+   "Id": "R146",
+   "File": "PowerArubaSW/Public/Port.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-method \"PUT\"",
+   "Replace": "-method \"GET\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWPort: HTTP-Methode vertauscht"
+  },
+  {
+   "Id": "R147",
+   "File": "PowerArubaSW/Public/Port.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$uri = \"",
+   "Replace": "$uri = \"x",
+   "Nth": 1,
+   "Note": "Get-ArubaSWPort: URI verfaelscht"
+  },
+  {
+   "Id": "R148",
+   "File": "PowerArubaSW/Public/Port.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$uri = \"",
+   "Replace": "$uri = \"x",
+   "Nth": 2,
+   "Note": "Get-ArubaSWPortStatistics: URI verfaelscht"
+  },
+  {
+   "Id": "R149",
+   "File": "PowerArubaSW/Public/Port.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$uri = \"",
+   "Replace": "$uri = \"x",
+   "Nth": 3,
+   "Note": "Set-ArubaSWPort: URI verfaelscht"
+  },
+  {
+   "Id": "R150",
+   "File": "PowerArubaSW/Public/Port.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"id\"",
+   "Replace": "Add-Member -name \"id_x\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWPort: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R151",
+   "File": "PowerArubaSW/Public/Port.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"name\"",
+   "Replace": "Add-Member -name \"name_x\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWPort: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R152",
+   "File": "PowerArubaSW/Public/Port.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"is_port_enabled\"",
+   "Replace": "Add-Member -name \"is_port_enabled_x\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWPort: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R153",
+   "File": "PowerArubaSW/Public/Port.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"is_port_enabled\"",
+   "Replace": "Add-Member -name \"is_port_enabled_x\"",
+   "Nth": 2,
+   "Note": "Set-ArubaSWPort: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R154",
+   "File": "PowerArubaSW/Public/Port.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"config_mode\"",
+   "Replace": "Add-Member -name \"config_mode_x\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWPort: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R155",
+   "File": "PowerArubaSW/Public/Port.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"is_flow_control_enabled\"",
+   "Replace": "Add-Member -name \"is_flow_control_enabled_x\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWPort: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R156",
+   "File": "PowerArubaSW/Public/Port.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"is_flow_control_enabled\"",
+   "Replace": "Add-Member -name \"is_flow_control_enabled_x\"",
+   "Nth": 2,
+   "Note": "Set-ArubaSWPort: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R157",
+   "File": "PowerArubaSW/Public/Port.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"is_dsnoop_port_trusted\"",
+   "Replace": "Add-Member -name \"is_dsnoop_port_trusted_x\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWPort: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R158",
+   "File": "PowerArubaSW/Public/Port.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"is_dsnoop_port_trusted\"",
+   "Replace": "Add-Member -name \"is_dsnoop_port_trusted_x\"",
+   "Nth": 2,
+   "Note": "Set-ArubaSWPort: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R159",
+   "File": "PowerArubaSW/Public/Port.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('name')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('name'))",
+   "Nth": 1,
+   "Note": "Set-ArubaSWPort: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R160",
+   "File": "PowerArubaSW/Public/Port.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('is_port_enabled')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('is_port_enabled'))",
+   "Nth": 1,
+   "Note": "Set-ArubaSWPort: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R161",
+   "File": "PowerArubaSW/Public/Port.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('config_mode')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('config_mode'))",
+   "Nth": 1,
+   "Note": "Set-ArubaSWPort: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R162",
+   "File": "PowerArubaSW/Public/Port.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('is_flow_control_enabled')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('is_flow_control_enabled'))",
+   "Nth": 1,
+   "Note": "Set-ArubaSWPort: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R163",
+   "File": "PowerArubaSW/Public/Port.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('is_dsnoop_port_trusted')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('is_dsnoop_port_trusted'))",
+   "Nth": 1,
+   "Note": "Set-ArubaSWPort: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R164",
+   "File": "PowerArubaSW/Public/Port.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "if ($PSCmdlet.ShouldProcess($port_id, 'Configure Port')) {",
+   "Replace": "if ($true) {",
+   "Nth": 1,
+   "Note": "Set-ArubaSWPort: ShouldProcess/-WhatIf ausgehebelt"
+  },
+  {
+   "Id": "R165",
+   "File": "PowerArubaSW/Public/RADIUSProfile.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-method \"GET\"",
+   "Replace": "-method \"DELETE\"",
+   "Nth": 1,
+   "Note": "give: HTTP-Methode vertauscht"
+  },
+  {
+   "Id": "R166",
+   "File": "PowerArubaSW/Public/RADIUSProfile.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-method \"PUT\"",
+   "Replace": "-method \"GET\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWRadiusProfile: HTTP-Methode vertauscht"
+  },
+  {
+   "Id": "R167",
+   "File": "PowerArubaSW/Public/RADIUSProfile.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$uri = \"",
+   "Replace": "$uri = \"x",
+   "Nth": 1,
+   "Note": "give: URI verfaelscht"
+  },
+  {
+   "Id": "R168",
+   "File": "PowerArubaSW/Public/RADIUSProfile.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$uri = \"",
+   "Replace": "$uri = \"x",
+   "Nth": 2,
+   "Note": "Set-ArubaSWRadiusProfile: URI verfaelscht"
+  },
+  {
+   "Id": "R169",
+   "File": "PowerArubaSW/Public/RADIUSProfile.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"retry_interval\"",
+   "Replace": "Add-Member -name \"retry_interval_x\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWRadiusProfile: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R170",
+   "File": "PowerArubaSW/Public/RADIUSProfile.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"retransmit_attempts\"",
+   "Replace": "Add-Member -name \"retransmit_attempts_x\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWRadiusProfile: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R171",
+   "File": "PowerArubaSW/Public/RADIUSProfile.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"dead_time\"",
+   "Replace": "Add-Member -name \"dead_time_x\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWRadiusProfile: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R172",
+   "File": "PowerArubaSW/Public/RADIUSProfile.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"key\"",
+   "Replace": "Add-Member -name \"key_x\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWRadiusProfile: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R173",
+   "File": "PowerArubaSW/Public/RADIUSProfile.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"dyn_autz_port\"",
+   "Replace": "Add-Member -name \"dyn_autz_port_x\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWRadiusProfile: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R174",
+   "File": "PowerArubaSW/Public/RADIUSProfile.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"tracking_uname\"",
+   "Replace": "Add-Member -name \"tracking_uname_x\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWRadiusProfile: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R175",
+   "File": "PowerArubaSW/Public/RADIUSProfile.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"is_tracking_enabled\"",
+   "Replace": "Add-Member -name \"is_tracking_enabled_x\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWRadiusProfile: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R176",
+   "File": "PowerArubaSW/Public/RADIUSProfile.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"is_tracking_enabled\"",
+   "Replace": "Add-Member -name \"is_tracking_enabled_x\"",
+   "Nth": 2,
+   "Note": "Set-ArubaSWRadiusProfile: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R177",
+   "File": "PowerArubaSW/Public/RADIUSProfile.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('retry_interval')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('retry_interval'))",
+   "Nth": 1,
+   "Note": "Set-ArubaSWRadiusProfile: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R178",
+   "File": "PowerArubaSW/Public/RADIUSProfile.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('retransmit_attempts')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('retransmit_attempts'))",
+   "Nth": 1,
+   "Note": "Set-ArubaSWRadiusProfile: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R179",
+   "File": "PowerArubaSW/Public/RADIUSProfile.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('dead_time')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('dead_time'))",
+   "Nth": 1,
+   "Note": "Set-ArubaSWRadiusProfile: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R180",
+   "File": "PowerArubaSW/Public/RADIUSProfile.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('key')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('key'))",
+   "Nth": 1,
+   "Note": "Set-ArubaSWRadiusProfile: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R181",
+   "File": "PowerArubaSW/Public/RADIUSProfile.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('dyn_autz_port')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('dyn_autz_port'))",
+   "Nth": 1,
+   "Note": "Set-ArubaSWRadiusProfile: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R182",
+   "File": "PowerArubaSW/Public/RADIUSProfile.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('tracking_uname')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('tracking_uname'))",
+   "Nth": 1,
+   "Note": "Set-ArubaSWRadiusProfile: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R183",
+   "File": "PowerArubaSW/Public/RADIUSProfile.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('is_tracking_enabled')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('is_tracking_enabled'))",
+   "Nth": 1,
+   "Note": "Set-ArubaSWRadiusProfile: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R184",
+   "File": "PowerArubaSW/Public/RADIUSProfile.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "if ($PSCmdlet.ShouldProcess($connection.server, 'Configure RADIUS Profile')) {",
+   "Replace": "if ($true) {",
+   "Nth": 1,
+   "Note": "Set-ArubaSWRadiusProfile: ShouldProcess/-WhatIf ausgehebelt"
+  },
+  {
+   "Id": "R185",
+   "File": "PowerArubaSW/Public/RADIUSServer.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-method \"GET\"",
+   "Replace": "-method \"DELETE\"",
+   "Nth": 1,
+   "Note": "give: HTTP-Methode vertauscht"
+  },
+  {
+   "Id": "R186",
+   "File": "PowerArubaSW/Public/RADIUSServer.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-method \"POST\"",
+   "Replace": "-method \"GET\"",
+   "Nth": 1,
+   "Note": "Add-ArubaSWRadiusServer: HTTP-Methode vertauscht"
+  },
+  {
+   "Id": "R187",
+   "File": "PowerArubaSW/Public/RADIUSServer.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-method \"PUT\"",
+   "Replace": "-method \"GET\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWRadiusServer: HTTP-Methode vertauscht"
+  },
+  {
+   "Id": "R188",
+   "File": "PowerArubaSW/Public/RADIUSServer.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-method \"DELETE\"",
+   "Replace": "-method \"GET\"",
+   "Nth": 1,
+   "Note": "Remove-ArubaSWRadiusServer: HTTP-Methode vertauscht"
+  },
+  {
+   "Id": "R189",
+   "File": "PowerArubaSW/Public/RADIUSServer.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$uri = \"",
+   "Replace": "$uri = \"x",
+   "Nth": 1,
+   "Note": "give: URI verfaelscht"
+  },
+  {
+   "Id": "R190",
+   "File": "PowerArubaSW/Public/RADIUSServer.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$uri = \"",
+   "Replace": "$uri = \"x",
+   "Nth": 2,
+   "Note": "Add-ArubaSWRadiusServer: URI verfaelscht"
+  },
+  {
+   "Id": "R191",
+   "File": "PowerArubaSW/Public/RADIUSServer.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$uri = \"",
+   "Replace": "$uri = \"x",
+   "Nth": 3,
+   "Note": "Set-ArubaSWRadiusServer: URI verfaelscht"
+  },
+  {
+   "Id": "R192",
+   "File": "PowerArubaSW/Public/RADIUSServer.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$uri = \"",
+   "Replace": "$uri = \"x",
+   "Nth": 4,
+   "Note": "Remove-ArubaSWRadiusServer: URI verfaelscht"
+  },
+  {
+   "Id": "R193",
+   "File": "PowerArubaSW/Public/RADIUSServer.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"version\"",
+   "Replace": "Add-Member -name \"version_x\"",
+   "Nth": 1,
+   "Note": "Add-ArubaSWRadiusServer: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R194",
+   "File": "PowerArubaSW/Public/RADIUSServer.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"octets\"",
+   "Replace": "Add-Member -name \"octets_x\"",
+   "Nth": 1,
+   "Note": "Add-ArubaSWRadiusServer: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R195",
+   "File": "PowerArubaSW/Public/RADIUSServer.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"address\"",
+   "Replace": "Add-Member -name \"address_x\"",
+   "Nth": 1,
+   "Note": "Add-ArubaSWRadiusServer: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R196",
+   "File": "PowerArubaSW/Public/RADIUSServer.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"shared_secret\"",
+   "Replace": "Add-Member -name \"shared_secret_x\"",
+   "Nth": 1,
+   "Note": "Add-ArubaSWRadiusServer: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R197",
+   "File": "PowerArubaSW/Public/RADIUSServer.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"authentication_port\"",
+   "Replace": "Add-Member -name \"authentication_port_x\"",
+   "Nth": 1,
+   "Note": "Add-ArubaSWRadiusServer: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R198",
+   "File": "PowerArubaSW/Public/RADIUSServer.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"accounting_port\"",
+   "Replace": "Add-Member -name \"accounting_port_x\"",
+   "Nth": 1,
+   "Note": "Add-ArubaSWRadiusServer: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R199",
+   "File": "PowerArubaSW/Public/RADIUSServer.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"is_dyn_authorization_enabled\"",
+   "Replace": "Add-Member -name \"is_dyn_authorization_enabled_x\"",
+   "Nth": 1,
+   "Note": "Add-ArubaSWRadiusServer: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R200",
+   "File": "PowerArubaSW/Public/RADIUSServer.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"is_dyn_authorization_enabled\"",
+   "Replace": "Add-Member -name \"is_dyn_authorization_enabled_x\"",
+   "Nth": 2,
+   "Note": "Add-ArubaSWRadiusServer: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R201",
+   "File": "PowerArubaSW/Public/RADIUSServer.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"time_window_type\"",
+   "Replace": "Add-Member -name \"time_window_type_x\"",
+   "Nth": 1,
+   "Note": "Add-ArubaSWRadiusServer: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R202",
+   "File": "PowerArubaSW/Public/RADIUSServer.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"time_window\"",
+   "Replace": "Add-Member -name \"time_window_x\"",
+   "Nth": 1,
+   "Note": "Add-ArubaSWRadiusServer: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R203",
+   "File": "PowerArubaSW/Public/RADIUSServer.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"is_oobm\"",
+   "Replace": "Add-Member -name \"is_oobm_x\"",
+   "Nth": 1,
+   "Note": "Add-ArubaSWRadiusServer: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R204",
+   "File": "PowerArubaSW/Public/RADIUSServer.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"is_oobm\"",
+   "Replace": "Add-Member -name \"is_oobm_x\"",
+   "Nth": 2,
+   "Note": "Add-ArubaSWRadiusServer: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R205",
+   "File": "PowerArubaSW/Public/RADIUSServer.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"address\"",
+   "Replace": "Add-Member -name \"address_x\"",
+   "Nth": 2,
+   "Note": "Set-ArubaSWRadiusServer: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R206",
+   "File": "PowerArubaSW/Public/RADIUSServer.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"address\"",
+   "Replace": "Add-Member -name \"address_x\"",
+   "Nth": 3,
+   "Note": "Set-ArubaSWRadiusServer: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R207",
+   "File": "PowerArubaSW/Public/RADIUSServer.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"shared_secret\"",
+   "Replace": "Add-Member -name \"shared_secret_x\"",
+   "Nth": 2,
+   "Note": "Set-ArubaSWRadiusServer: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R208",
+   "File": "PowerArubaSW/Public/RADIUSServer.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"authentication_port\"",
+   "Replace": "Add-Member -name \"authentication_port_x\"",
+   "Nth": 2,
+   "Note": "Set-ArubaSWRadiusServer: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R209",
+   "File": "PowerArubaSW/Public/RADIUSServer.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"accounting_port\"",
+   "Replace": "Add-Member -name \"accounting_port_x\"",
+   "Nth": 2,
+   "Note": "Set-ArubaSWRadiusServer: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R210",
+   "File": "PowerArubaSW/Public/RADIUSServer.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"is_dyn_authorization_enabled\"",
+   "Replace": "Add-Member -name \"is_dyn_authorization_enabled_x\"",
+   "Nth": 3,
+   "Note": "Set-ArubaSWRadiusServer: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R211",
+   "File": "PowerArubaSW/Public/RADIUSServer.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"is_dyn_authorization_enabled\"",
+   "Replace": "Add-Member -name \"is_dyn_authorization_enabled_x\"",
+   "Nth": 4,
+   "Note": "Set-ArubaSWRadiusServer: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R212",
+   "File": "PowerArubaSW/Public/RADIUSServer.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"time_window_type\"",
+   "Replace": "Add-Member -name \"time_window_type_x\"",
+   "Nth": 2,
+   "Note": "Set-ArubaSWRadiusServer: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R213",
+   "File": "PowerArubaSW/Public/RADIUSServer.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"time_window\"",
+   "Replace": "Add-Member -name \"time_window_x\"",
+   "Nth": 2,
+   "Note": "Set-ArubaSWRadiusServer: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R214",
+   "File": "PowerArubaSW/Public/RADIUSServer.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"is_oobm\"",
+   "Replace": "Add-Member -name \"is_oobm_x\"",
+   "Nth": 3,
+   "Note": "Set-ArubaSWRadiusServer: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R215",
+   "File": "PowerArubaSW/Public/RADIUSServer.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"is_oobm\"",
+   "Replace": "Add-Member -name \"is_oobm_x\"",
+   "Nth": 4,
+   "Note": "Set-ArubaSWRadiusServer: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R216",
+   "File": "PowerArubaSW/Public/RADIUSServer.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('authentication_port')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('authentication_port'))",
+   "Nth": 1,
+   "Note": "Add-ArubaSWRadiusServer: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R217",
+   "File": "PowerArubaSW/Public/RADIUSServer.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('accounting_port')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('accounting_port'))",
+   "Nth": 1,
+   "Note": "Add-ArubaSWRadiusServer: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R218",
+   "File": "PowerArubaSW/Public/RADIUSServer.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('is_dyn_authorization_enabled')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('is_dyn_authorization_enabled'))",
+   "Nth": 1,
+   "Note": "Add-ArubaSWRadiusServer: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R219",
+   "File": "PowerArubaSW/Public/RADIUSServer.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('time_window_type')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('time_window_type'))",
+   "Nth": 1,
+   "Note": "Add-ArubaSWRadiusServer: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R220",
+   "File": "PowerArubaSW/Public/RADIUSServer.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('time_window')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('time_window'))",
+   "Nth": 1,
+   "Note": "Add-ArubaSWRadiusServer: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R221",
+   "File": "PowerArubaSW/Public/RADIUSServer.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('is_oobm')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('is_oobm'))",
+   "Nth": 1,
+   "Note": "Add-ArubaSWRadiusServer: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R222",
+   "File": "PowerArubaSW/Public/RADIUSServer.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('id')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('id'))",
+   "Nth": 1,
+   "Note": "Set-ArubaSWRadiusServer: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R223",
+   "File": "PowerArubaSW/Public/RADIUSServer.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('shared_secret')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('shared_secret'))",
+   "Nth": 1,
+   "Note": "Set-ArubaSWRadiusServer: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R224",
+   "File": "PowerArubaSW/Public/RADIUSServer.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('authentication_port')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('authentication_port'))",
+   "Nth": 2,
+   "Note": "Set-ArubaSWRadiusServer: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R225",
+   "File": "PowerArubaSW/Public/RADIUSServer.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('accounting_port')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('accounting_port'))",
+   "Nth": 2,
+   "Note": "Set-ArubaSWRadiusServer: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R226",
+   "File": "PowerArubaSW/Public/RADIUSServer.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('is_dyn_authorization_enabled')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('is_dyn_authorization_enabled'))",
+   "Nth": 2,
+   "Note": "Set-ArubaSWRadiusServer: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R227",
+   "File": "PowerArubaSW/Public/RADIUSServer.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('time_window_type')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('time_window_type'))",
+   "Nth": 2,
+   "Note": "Set-ArubaSWRadiusServer: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R228",
+   "File": "PowerArubaSW/Public/RADIUSServer.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('time_window')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('time_window'))",
+   "Nth": 2,
+   "Note": "Set-ArubaSWRadiusServer: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R229",
+   "File": "PowerArubaSW/Public/RADIUSServer.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('is_oobm')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('is_oobm'))",
+   "Nth": 2,
+   "Note": "Set-ArubaSWRadiusServer: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R230",
+   "File": "PowerArubaSW/Public/RADIUSServer.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "if ($PSCmdlet.ShouldProcess($id, 'Configure RADIUS Server')) {",
+   "Replace": "if ($true) {",
+   "Nth": 1,
+   "Note": "Set-ArubaSWRadiusServer: ShouldProcess/-WhatIf ausgehebelt"
+  },
+  {
+   "Id": "R231",
+   "File": "PowerArubaSW/Public/RADIUSServer.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "if ($PSCmdlet.ShouldProcess($id, 'Remove RADIUS Server')) {",
+   "Replace": "if ($true) {",
+   "Nth": 1,
+   "Note": "Remove-ArubaSWRadiusServer: ShouldProcess/-WhatIf ausgehebelt"
+  },
+  {
+   "Id": "R232",
+   "File": "PowerArubaSW/Public/RADIUSServer.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-Value \"IAV_IP_V4\"",
+   "Replace": "-Value \"IAV_IP_V4_x\"",
+   "Nth": 1,
+   "Note": "Add-ArubaSWRadiusServer: Konstanter Body-Wert verfaelscht"
+  },
+  {
+   "Id": "R233",
+   "File": "PowerArubaSW/Public/RADIUSServerGroup.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-method \"GET\"",
+   "Replace": "-method \"DELETE\"",
+   "Nth": 1,
+   "Note": "give: HTTP-Methode vertauscht"
+  },
+  {
+   "Id": "R234",
+   "File": "PowerArubaSW/Public/RADIUSServerGroup.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-method \"POST\"",
+   "Replace": "-method \"GET\"",
+   "Nth": 1,
+   "Note": "Add-ArubaSWRadiusServerGroup: HTTP-Methode vertauscht"
+  },
+  {
+   "Id": "R235",
+   "File": "PowerArubaSW/Public/RADIUSServerGroup.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-method \"DELETE\"",
+   "Replace": "-method \"GET\"",
+   "Nth": 1,
+   "Note": "Remove-ArubaSWRadiusServerGroup: HTTP-Methode vertauscht"
+  },
+  {
+   "Id": "R236",
+   "File": "PowerArubaSW/Public/RADIUSServerGroup.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$uri = \"",
+   "Replace": "$uri = \"x",
+   "Nth": 1,
+   "Note": "give: URI verfaelscht"
+  },
+  {
+   "Id": "R237",
+   "File": "PowerArubaSW/Public/RADIUSServerGroup.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$uri = \"",
+   "Replace": "$uri = \"x",
+   "Nth": 2,
+   "Note": "Add-ArubaSWRadiusServerGroup: URI verfaelscht"
+  },
+  {
+   "Id": "R238",
+   "File": "PowerArubaSW/Public/RADIUSServerGroup.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$uri = \"",
+   "Replace": "$uri = \"x",
+   "Nth": 3,
+   "Note": "Remove-ArubaSWRadiusServerGroup: URI verfaelscht"
+  },
+  {
+   "Id": "R239",
+   "File": "PowerArubaSW/Public/RADIUSServerGroup.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"version\"",
+   "Replace": "Add-Member -name \"version_x\"",
+   "Nth": 1,
+   "Note": "Add-ArubaSWRadiusServerGroup: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R240",
+   "File": "PowerArubaSW/Public/RADIUSServerGroup.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"octets\"",
+   "Replace": "Add-Member -name \"octets_x\"",
+   "Nth": 1,
+   "Note": "Add-ArubaSWRadiusServerGroup: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R241",
+   "File": "PowerArubaSW/Public/RADIUSServerGroup.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"version\"",
+   "Replace": "Add-Member -name \"version_x\"",
+   "Nth": 2,
+   "Note": "Add-ArubaSWRadiusServerGroup: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R242",
+   "File": "PowerArubaSW/Public/RADIUSServerGroup.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"octets\"",
+   "Replace": "Add-Member -name \"octets_x\"",
+   "Nth": 2,
+   "Note": "Add-ArubaSWRadiusServerGroup: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R243",
+   "File": "PowerArubaSW/Public/RADIUSServerGroup.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"version\"",
+   "Replace": "Add-Member -name \"version_x\"",
+   "Nth": 3,
+   "Note": "Add-ArubaSWRadiusServerGroup: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R244",
+   "File": "PowerArubaSW/Public/RADIUSServerGroup.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"octets\"",
+   "Replace": "Add-Member -name \"octets_x\"",
+   "Nth": 3,
+   "Note": "Add-ArubaSWRadiusServerGroup: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R245",
+   "File": "PowerArubaSW/Public/RADIUSServerGroup.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"server_ip\"",
+   "Replace": "Add-Member -name \"server_ip_x\"",
+   "Nth": 1,
+   "Note": "Add-ArubaSWRadiusServerGroup: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R246",
+   "File": "PowerArubaSW/Public/RADIUSServerGroup.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"server_group_name\"",
+   "Replace": "Add-Member -name \"server_group_name_x\"",
+   "Nth": 1,
+   "Note": "Add-ArubaSWRadiusServerGroup: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R247",
+   "File": "PowerArubaSW/Public/RADIUSServerGroup.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('server2')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('server2'))",
+   "Nth": 1,
+   "Note": "Add-ArubaSWRadiusServerGroup: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R248",
+   "File": "PowerArubaSW/Public/RADIUSServerGroup.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('server3')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('server3'))",
+   "Nth": 1,
+   "Note": "Add-ArubaSWRadiusServerGroup: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R249",
+   "File": "PowerArubaSW/Public/RADIUSServerGroup.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "if ($PSCmdlet.ShouldProcess($server_group_name, 'Remove RADIUS Server Group')) {",
+   "Replace": "if ($true) {",
+   "Nth": 1,
+   "Note": "Remove-ArubaSWRadiusServerGroup: ShouldProcess/-WhatIf ausgehebelt"
+  },
+  {
+   "Id": "R250",
+   "File": "PowerArubaSW/Public/RADIUSServerGroup.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-Value \"IAV_IP_V4\"",
+   "Replace": "-Value \"IAV_IP_V4_x\"",
+   "Nth": 1,
+   "Note": "Add-ArubaSWRadiusServerGroup: Konstanter Body-Wert verfaelscht"
+  },
+  {
+   "Id": "R251",
+   "File": "PowerArubaSW/Public/RADIUSServerGroup.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-Value \"IAV_IP_V4\"",
+   "Replace": "-Value \"IAV_IP_V4_x\"",
+   "Nth": 2,
+   "Note": "Add-ArubaSWRadiusServerGroup: Konstanter Body-Wert verfaelscht"
+  },
+  {
+   "Id": "R252",
+   "File": "PowerArubaSW/Public/RADIUSServerGroup.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-Value \"IAV_IP_V4\"",
+   "Replace": "-Value \"IAV_IP_V4_x\"",
+   "Nth": 3,
+   "Note": "Add-ArubaSWRadiusServerGroup: Konstanter Body-Wert verfaelscht"
+  },
+  {
+   "Id": "R253",
+   "File": "PowerArubaSW/Public/RestTimeout.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-method \"GET\"",
+   "Replace": "-method \"DELETE\"",
+   "Nth": 1,
+   "Note": "give: HTTP-Methode vertauscht"
+  },
+  {
+   "Id": "R254",
+   "File": "PowerArubaSW/Public/RestTimeout.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-method \"PUT\"",
+   "Replace": "-method \"GET\"",
+   "Nth": 1,
+   "Note": "allow: HTTP-Methode vertauscht"
+  },
+  {
+   "Id": "R255",
+   "File": "PowerArubaSW/Public/RestTimeout.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$uri = \"",
+   "Replace": "$uri = \"x",
+   "Nth": 1,
+   "Note": "give: URI verfaelscht"
+  },
+  {
+   "Id": "R256",
+   "File": "PowerArubaSW/Public/RestTimeout.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$uri = \"",
+   "Replace": "$uri = \"x",
+   "Nth": 2,
+   "Note": "allow: URI verfaelscht"
+  },
+  {
+   "Id": "R257",
+   "File": "PowerArubaSW/Public/RestTimeout.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"timeout\"",
+   "Replace": "Add-Member -name \"timeout_x\"",
+   "Nth": 1,
+   "Note": "allow: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R258",
+   "File": "PowerArubaSW/Public/RestTimeout.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('timeout')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('timeout'))",
+   "Nth": 1,
+   "Note": "allow: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R259",
+   "File": "PowerArubaSW/Public/RestTimeout.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "if ($PSCmdlet.ShouldProcess($connection.server, 'Configure REST Timeout')) {",
+   "Replace": "if ($true) {",
+   "Nth": 1,
+   "Note": "allow: ShouldProcess/-WhatIf ausgehebelt"
+  },
+  {
+   "Id": "R260",
+   "File": "PowerArubaSW/Public/RestVersion.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-method \"GET\"",
+   "Replace": "-method \"DELETE\"",
+   "Nth": 1,
+   "Note": "Get-ArubaSWRestVersion: HTTP-Methode vertauscht"
+  },
+  {
+   "Id": "R261",
+   "File": "PowerArubaSW/Public/RestVersion.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$uri = \"",
+   "Replace": "$uri = \"x",
+   "Nth": 1,
+   "Note": "Get-ArubaSWRestVersion: URI verfaelscht"
+  },
+  {
+   "Id": "R262",
+   "File": "PowerArubaSW/Public/STP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-method \"GET\"",
+   "Replace": "-method \"DELETE\"",
+   "Nth": 1,
+   "Note": "give: HTTP-Methode vertauscht"
+  },
+  {
+   "Id": "R263",
+   "File": "PowerArubaSW/Public/STP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-method \"PUT\"",
+   "Replace": "-method \"GET\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWSTP: HTTP-Methode vertauscht"
+  },
+  {
+   "Id": "R264",
+   "File": "PowerArubaSW/Public/STP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-method \"GET\"",
+   "Replace": "-method \"DELETE\"",
+   "Nth": 2,
+   "Note": "Get-ArubaSWSTPPort: HTTP-Methode vertauscht"
+  },
+  {
+   "Id": "R265",
+   "File": "PowerArubaSW/Public/STP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-method \"PUT\"",
+   "Replace": "-method \"GET\"",
+   "Nth": 2,
+   "Note": "Set-ArubaSWSTPPort: HTTP-Methode vertauscht"
+  },
+  {
+   "Id": "R266",
+   "File": "PowerArubaSW/Public/STP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$uri = \"",
+   "Replace": "$uri = \"x",
+   "Nth": 1,
+   "Note": "give: URI verfaelscht"
+  },
+  {
+   "Id": "R267",
+   "File": "PowerArubaSW/Public/STP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$uri = \"",
+   "Replace": "$uri = \"x",
+   "Nth": 2,
+   "Note": "Set-ArubaSWSTP: URI verfaelscht"
+  },
+  {
+   "Id": "R268",
+   "File": "PowerArubaSW/Public/STP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$uri = \"",
+   "Replace": "$uri = \"x",
+   "Nth": 3,
+   "Note": "Get-ArubaSWSTPPort: URI verfaelscht"
+  },
+  {
+   "Id": "R269",
+   "File": "PowerArubaSW/Public/STP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$uri = \"",
+   "Replace": "$uri = \"x",
+   "Nth": 4,
+   "Note": "Set-ArubaSWSTPPort: URI verfaelscht"
+  },
+  {
+   "Id": "R270",
+   "File": "PowerArubaSW/Public/STP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"is_enabled\"",
+   "Replace": "Add-Member -name \"is_enabled_x\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWSTP: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R271",
+   "File": "PowerArubaSW/Public/STP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"is_enabled\"",
+   "Replace": "Add-Member -name \"is_enabled_x\"",
+   "Nth": 2,
+   "Note": "Set-ArubaSWSTP: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R272",
+   "File": "PowerArubaSW/Public/STP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"priority\"",
+   "Replace": "Add-Member -name \"priority_x\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWSTP: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R273",
+   "File": "PowerArubaSW/Public/STP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"mode\"",
+   "Replace": "Add-Member -name \"mode_x\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWSTP: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R274",
+   "File": "PowerArubaSW/Public/STP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"port_id\"",
+   "Replace": "Add-Member -name \"port_id_x\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWSTPPort: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R275",
+   "File": "PowerArubaSW/Public/STP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"priority\"",
+   "Replace": "Add-Member -name \"priority_x\"",
+   "Nth": 2,
+   "Note": "Set-ArubaSWSTPPort: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R276",
+   "File": "PowerArubaSW/Public/STP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"is_enable_admin_edge_port\"",
+   "Replace": "Add-Member -name \"is_enable_admin_edge_port_x\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWSTPPort: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R277",
+   "File": "PowerArubaSW/Public/STP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"is_enable_admin_edge_port\"",
+   "Replace": "Add-Member -name \"is_enable_admin_edge_port_x\"",
+   "Nth": 2,
+   "Note": "Set-ArubaSWSTPPort: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R278",
+   "File": "PowerArubaSW/Public/STP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"is_enable_bpdu_protection\"",
+   "Replace": "Add-Member -name \"is_enable_bpdu_protection_x\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWSTPPort: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R279",
+   "File": "PowerArubaSW/Public/STP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"is_enable_bpdu_protection\"",
+   "Replace": "Add-Member -name \"is_enable_bpdu_protection_x\"",
+   "Nth": 2,
+   "Note": "Set-ArubaSWSTPPort: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R280",
+   "File": "PowerArubaSW/Public/STP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"is_enable_bpdu_filter\"",
+   "Replace": "Add-Member -name \"is_enable_bpdu_filter_x\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWSTPPort: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R281",
+   "File": "PowerArubaSW/Public/STP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"is_enable_bpdu_filter\"",
+   "Replace": "Add-Member -name \"is_enable_bpdu_filter_x\"",
+   "Nth": 2,
+   "Note": "Set-ArubaSWSTPPort: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R282",
+   "File": "PowerArubaSW/Public/STP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"is_enable_root_guard\"",
+   "Replace": "Add-Member -name \"is_enable_root_guard_x\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWSTPPort: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R283",
+   "File": "PowerArubaSW/Public/STP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"is_enable_root_guard\"",
+   "Replace": "Add-Member -name \"is_enable_root_guard_x\"",
+   "Nth": 2,
+   "Note": "Set-ArubaSWSTPPort: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R284",
+   "File": "PowerArubaSW/Public/STP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('enable')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('enable'))",
+   "Nth": 1,
+   "Note": "Set-ArubaSWSTP: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R285",
+   "File": "PowerArubaSW/Public/STP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('priority')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('priority'))",
+   "Nth": 1,
+   "Note": "Set-ArubaSWSTP: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R286",
+   "File": "PowerArubaSW/Public/STP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('mode')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('mode'))",
+   "Nth": 1,
+   "Note": "Set-ArubaSWSTP: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R287",
+   "File": "PowerArubaSW/Public/STP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('priority')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('priority'))",
+   "Nth": 2,
+   "Note": "Set-ArubaSWSTPPort: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R288",
+   "File": "PowerArubaSW/Public/STP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('admin_edge')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('admin_edge'))",
+   "Nth": 1,
+   "Note": "Set-ArubaSWSTPPort: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R289",
+   "File": "PowerArubaSW/Public/STP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('bpdu_protection')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('bpdu_protection'))",
+   "Nth": 1,
+   "Note": "Set-ArubaSWSTPPort: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R290",
+   "File": "PowerArubaSW/Public/STP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('bpdu_filter')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('bpdu_filter'))",
+   "Nth": 1,
+   "Note": "Set-ArubaSWSTPPort: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R291",
+   "File": "PowerArubaSW/Public/STP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('root_guard')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('root_guard'))",
+   "Nth": 1,
+   "Note": "Set-ArubaSWSTPPort: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R292",
+   "File": "PowerArubaSW/Public/STP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "if ($PSCmdlet.ShouldProcess($connection.server, 'Configure STP')) {",
+   "Replace": "if ($true) {",
+   "Nth": 1,
+   "Note": "Set-ArubaSWSTP: ShouldProcess/-WhatIf ausgehebelt"
+  },
+  {
+   "Id": "R293",
+   "File": "PowerArubaSW/Public/STP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "if ($PSCmdlet.ShouldProcess($port, 'Configure STP Port')) {",
+   "Replace": "if ($true) {",
+   "Nth": 1,
+   "Note": "Set-ArubaSWSTPPort: ShouldProcess/-WhatIf ausgehebelt"
+  },
+  {
+   "Id": "R294",
+   "File": "PowerArubaSW/Public/STP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$_mode = \"STM_MSTP\"",
+   "Replace": "$_mode = \"STM_MSTP_X\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWSTP: Zugeordnete Konstante verfaelscht"
+  },
+  {
+   "Id": "R295",
+   "File": "PowerArubaSW/Public/STP.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$_mode = \"STM_RPVST\"",
+   "Replace": "$_mode = \"STM_RPVST_X\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWSTP: Zugeordnete Konstante verfaelscht"
+  },
+  {
+   "Id": "R296",
+   "File": "PowerArubaSW/Public/Trunk.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-method \"GET\"",
+   "Replace": "-method \"DELETE\"",
+   "Nth": 1,
+   "Note": "Get-ArubaSWTrunk: HTTP-Methode vertauscht"
+  },
+  {
+   "Id": "R297",
+   "File": "PowerArubaSW/Public/Trunk.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-method \"POST\"",
+   "Replace": "-method \"GET\"",
+   "Nth": 1,
+   "Note": "Add-ArubaSWTrunk: HTTP-Methode vertauscht"
+  },
+  {
+   "Id": "R298",
+   "File": "PowerArubaSW/Public/Trunk.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-method \"DELETE\"",
+   "Replace": "-method \"GET\"",
+   "Nth": 1,
+   "Note": "Remove-ArubaSWTrunk: HTTP-Methode vertauscht"
+  },
+  {
+   "Id": "R299",
+   "File": "PowerArubaSW/Public/Trunk.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$uri = \"",
+   "Replace": "$uri = \"x",
+   "Nth": 1,
+   "Note": "Get-ArubaSWTrunk: URI verfaelscht"
+  },
+  {
+   "Id": "R300",
+   "File": "PowerArubaSW/Public/Trunk.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$uri = \"",
+   "Replace": "$uri = \"x",
+   "Nth": 2,
+   "Note": "Add-ArubaSWTrunk: URI verfaelscht"
+  },
+  {
+   "Id": "R301",
+   "File": "PowerArubaSW/Public/Trunk.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$uri = \"",
+   "Replace": "$uri = \"x",
+   "Nth": 3,
+   "Note": "Remove-ArubaSWTrunk: URI verfaelscht"
+  },
+  {
+   "Id": "R302",
+   "File": "PowerArubaSW/Public/Trunk.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"port_id\"",
+   "Replace": "Add-Member -name \"port_id_x\"",
+   "Nth": 1,
+   "Note": "Add-ArubaSWTrunk: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R303",
+   "File": "PowerArubaSW/Public/Trunk.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"trunk_group\"",
+   "Replace": "Add-Member -name \"trunk_group_x\"",
+   "Nth": 1,
+   "Note": "Add-ArubaSWTrunk: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R304",
+   "File": "PowerArubaSW/Public/Trunk.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"port_id\"",
+   "Replace": "Add-Member -name \"port_id_x\"",
+   "Nth": 2,
+   "Note": "Remove-ArubaSWTrunk: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R305",
+   "File": "PowerArubaSW/Public/Trunk.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"trunk_group\"",
+   "Replace": "Add-Member -name \"trunk_group_x\"",
+   "Nth": 2,
+   "Note": "Remove-ArubaSWTrunk: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R306",
+   "File": "PowerArubaSW/Public/Trunk.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "if ($PSCmdlet.ShouldProcess($id, 'Remove Trunk')) {",
+   "Replace": "if ($true) {",
+   "Nth": 1,
+   "Note": "Remove-ArubaSWTrunk: ShouldProcess/-WhatIf ausgehebelt"
+  },
+  {
+   "Id": "R307",
+   "File": "PowerArubaSW/Public/Vlans-Ports.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-method \"POST\"",
+   "Replace": "-method \"GET\"",
+   "Nth": 1,
+   "Note": "Add-ArubaSWVlansPorts: HTTP-Methode vertauscht"
+  },
+  {
+   "Id": "R308",
+   "File": "PowerArubaSW/Public/Vlans-Ports.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-method \"GET\"",
+   "Replace": "-method \"DELETE\"",
+   "Nth": 1,
+   "Note": "Get-ArubaSWVlansPorts: HTTP-Methode vertauscht"
+  },
+  {
+   "Id": "R309",
+   "File": "PowerArubaSW/Public/Vlans-Ports.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-method \"PUT\"",
+   "Replace": "-method \"GET\"",
+   "Nth": 1,
+   "Note": "Set-ArubaSWVlansPorts: HTTP-Methode vertauscht"
+  },
+  {
+   "Id": "R310",
+   "File": "PowerArubaSW/Public/Vlans-Ports.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-method \"DELETE\"",
+   "Replace": "-method \"GET\"",
+   "Nth": 1,
+   "Note": "Remove-ArubaSWVlansPorts: HTTP-Methode vertauscht"
+  },
+  {
+   "Id": "R311",
+   "File": "PowerArubaSW/Public/Vlans-Ports.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$uri = \"",
+   "Replace": "$uri = \"x",
+   "Nth": 1,
+   "Note": "Add-ArubaSWVlansPorts: URI verfaelscht"
+  },
+  {
+   "Id": "R312",
+   "File": "PowerArubaSW/Public/Vlans-Ports.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$uri = \"",
+   "Replace": "$uri = \"x",
+   "Nth": 2,
+   "Note": "Get-ArubaSWVlansPorts: URI verfaelscht"
+  },
+  {
+   "Id": "R313",
+   "File": "PowerArubaSW/Public/Vlans-Ports.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$uri = \"",
+   "Replace": "$uri = \"x",
+   "Nth": 3,
+   "Note": "Set-ArubaSWVlansPorts: URI verfaelscht"
+  },
+  {
+   "Id": "R314",
+   "File": "PowerArubaSW/Public/Vlans-Ports.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$uri = \"",
+   "Replace": "$uri = \"x",
+   "Nth": 4,
+   "Note": "Remove-ArubaSWVlansPorts: URI verfaelscht"
+  },
+  {
+   "Id": "R315",
+   "File": "PowerArubaSW/Public/Vlans-Ports.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"vlan_id\"",
+   "Replace": "Add-Member -name \"vlan_id_x\"",
+   "Nth": 1,
+   "Note": "Add-ArubaSWVlansPorts: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R316",
+   "File": "PowerArubaSW/Public/Vlans-Ports.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"port_id\"",
+   "Replace": "Add-Member -name \"port_id_x\"",
+   "Nth": 1,
+   "Note": "Add-ArubaSWVlansPorts: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R317",
+   "File": "PowerArubaSW/Public/Vlans-Ports.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"port_mode\"",
+   "Replace": "Add-Member -name \"port_mode_x\"",
+   "Nth": 1,
+   "Note": "Add-ArubaSWVlansPorts: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R318",
+   "File": "PowerArubaSW/Public/Vlans-Ports.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"port_mode\"",
+   "Replace": "Add-Member -name \"port_mode_x\"",
+   "Nth": 2,
+   "Note": "Add-ArubaSWVlansPorts: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R319",
+   "File": "PowerArubaSW/Public/Vlans-Ports.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"port_mode\"",
+   "Replace": "Add-Member -name \"port_mode_x\"",
+   "Nth": 3,
+   "Note": "Add-ArubaSWVlansPorts: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R320",
+   "File": "PowerArubaSW/Public/Vlans-Ports.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"vlan_id\"",
+   "Replace": "Add-Member -name \"vlan_id_x\"",
+   "Nth": 2,
+   "Note": "Set-ArubaSWVlansPorts: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R321",
+   "File": "PowerArubaSW/Public/Vlans-Ports.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"port_id\"",
+   "Replace": "Add-Member -name \"port_id_x\"",
+   "Nth": 2,
+   "Note": "Set-ArubaSWVlansPorts: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R322",
+   "File": "PowerArubaSW/Public/Vlans-Ports.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"port_mode\"",
+   "Replace": "Add-Member -name \"port_mode_x\"",
+   "Nth": 4,
+   "Note": "Set-ArubaSWVlansPorts: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R323",
+   "File": "PowerArubaSW/Public/Vlans-Ports.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"port_mode\"",
+   "Replace": "Add-Member -name \"port_mode_x\"",
+   "Nth": 5,
+   "Note": "Set-ArubaSWVlansPorts: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R324",
+   "File": "PowerArubaSW/Public/Vlans-Ports.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "Add-Member -name \"port_mode\"",
+   "Replace": "Add-Member -name \"port_mode_x\"",
+   "Nth": 6,
+   "Note": "Set-ArubaSWVlansPorts: Body-Feldname verfaelscht"
+  },
+  {
+   "Id": "R325",
+   "File": "PowerArubaSW/Public/Vlans-Ports.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('vlan_id')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('vlan_id'))",
+   "Nth": 1,
+   "Note": "Get-ArubaSWVlansPorts: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R326",
+   "File": "PowerArubaSW/Public/Vlans-Ports.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "$PsBoundParameters.ContainsKey('port_id')",
+   "Replace": "(-not $PsBoundParameters.ContainsKey('port_id'))",
+   "Nth": 1,
+   "Note": "Get-ArubaSWVlansPorts: Parameter-gebunden-Pruefung gedreht"
+  },
+  {
+   "Id": "R327",
+   "File": "PowerArubaSW/Public/Vlans-Ports.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "if ($PSCmdlet.ShouldProcess(\"${vlan_id}-${port_id}\", 'Configure Vlans Ports')) {",
+   "Replace": "if ($true) {",
+   "Nth": 1,
+   "Note": "Set-ArubaSWVlansPorts: ShouldProcess/-WhatIf ausgehebelt"
+  },
+  {
+   "Id": "R328",
+   "File": "PowerArubaSW/Public/Vlans-Ports.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "if ($PSCmdlet.ShouldProcess(\"${vlan_id}-${port_id}\", 'Configure Vlans Ports')) {",
+   "Replace": "if ($true) {",
+   "Nth": 2,
+   "Note": "Remove-ArubaSWVlansPorts: ShouldProcess/-WhatIf ausgehebelt"
+  },
+  {
+   "Id": "R329",
+   "File": "PowerArubaSW/Public/Vlans-Ports.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-Value \"POM_UNTAGGED\"",
+   "Replace": "-Value \"POM_UNTAGGED_x\"",
+   "Nth": 1,
+   "Note": "Add-ArubaSWVlansPorts: Konstanter Body-Wert verfaelscht"
+  },
+  {
+   "Id": "R330",
+   "File": "PowerArubaSW/Public/Vlans-Ports.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-Value \"POM_TAGGED_STATIC\"",
+   "Replace": "-Value \"POM_TAGGED_STATIC_x\"",
+   "Nth": 1,
+   "Note": "Add-ArubaSWVlansPorts: Konstanter Body-Wert verfaelscht"
+  },
+  {
+   "Id": "R331",
+   "File": "PowerArubaSW/Public/Vlans-Ports.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-Value \"POM_FORBIDDEN\"",
+   "Replace": "-Value \"POM_FORBIDDEN_x\"",
+   "Nth": 1,
+   "Note": "Add-ArubaSWVlansPorts: Konstanter Body-Wert verfaelscht"
+  },
+  {
+   "Id": "R332",
+   "File": "PowerArubaSW/Public/Vlans-Ports.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-Value \"POM_UNTAGGED\"",
+   "Replace": "-Value \"POM_UNTAGGED_x\"",
+   "Nth": 2,
+   "Note": "Set-ArubaSWVlansPorts: Konstanter Body-Wert verfaelscht"
+  },
+  {
+   "Id": "R333",
+   "File": "PowerArubaSW/Public/Vlans-Ports.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-Value \"POM_TAGGED_STATIC\"",
+   "Replace": "-Value \"POM_TAGGED_STATIC_x\"",
+   "Nth": 2,
+   "Note": "Set-ArubaSWVlansPorts: Konstanter Body-Wert verfaelscht"
+  },
+  {
+   "Id": "R334",
+   "File": "PowerArubaSW/Public/Vlans-Ports.ps1",
+   "Tests": [
+    "Tests/unit/RequestVertrag.Tests.ps1"
+   ],
+   "Find": "-Value \"POM_FORBIDDEN\"",
+   "Replace": "-Value \"POM_FORBIDDEN_x\"",
+   "Nth": 2,
+   "Note": "Set-ArubaSWVlansPorts: Konstanter Body-Wert verfaelscht"
+  }
+ ]
+}

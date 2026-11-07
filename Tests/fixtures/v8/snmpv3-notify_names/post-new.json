@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "uri": "snmpv3/notify_names",
+    "method": "POST",
+    "api_version": 8,
+    "status_code": 201,
+    "recorded_at": "2026-10-27",
+    "firmware": "ANONYMIZED",
+    "switch_model": "ANONYMIZED",
+    "anonymized": true,
+    "note": "POST echoes the new notify name (I37)."
+  },
+  "content": "{\"uri\":\"/snmpv3/notify_names/i36notify\",\"notify_name\":\"i36notify\",\"tagvalue\":\"i36tag\"}"
+}

@@ -1,0 +1,86 @@
+name: Tests
+
+# Hardware-freie Unit-Tests laufen bei jedem Pull-Request gegen eine
+# Matrix aus Windows-PS7, Windows-PS5.1 und Ubuntu-PS7. Die bestehenden
+# Integrationstests (Tests/integration/*.Tests.ps1, Pester-Tag 'Integration')
+# benoetigen einen echten ArubaOS-Switch und werden hier bewusst NICHT
+# ausgefuehrt.
+#
+# PSScriptAnalyzer-Lint laeuft weiterhin separat in pssa.yml.
+
+on:
+  pull_request:
+  push:
+    branches: [master, main]
+
+jobs:
+  test:
+    name: Pester (${{ matrix.os }} / ${{ matrix.shell }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: windows-latest
+            shell: pwsh         # PowerShell 7+
+            label: win-ps7
+          - os: windows-latest
+            shell: powershell   # Windows PowerShell 5.1
+            label: win-ps51
+          - os: ubuntu-latest
+            shell: pwsh
+            label: linux-ps7
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Show PowerShell edition
+        shell: ${{ matrix.shell }}
+        run: |
+          $PSVersionTable | Format-Table -AutoSize
+
+      - name: Install pinned Pester (and TLS 1.2 fix for PS 5.1)
+        shell: ${{ matrix.shell }}
+        run: |
+          # Windows PowerShell 5.1 startet mit TLS 1.0; PSGallery erzwingt TLS 1.2.
+          # Auf pwsh ist SystemDefault sinnvoll - kein Eingriff noetig.
+          if ($PSVersionTable.PSEdition -eq 'Desktop') {
+            [Net.ServicePointManager]::SecurityProtocol = `
+              [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
+          }
+
+          $req = Import-PowerShellDataFile ./Tests/RequiredModules.psd1
+          $pesterVer = $req.Pester.RequiredVersion
+          Write-Host "Pinning Pester to $pesterVer"
+
+          # -SkipPublisherCheck noetig, weil Pester-5-Signatur sich von dem
+          # in PS 5.1 eingebauten Pester 3.4.0 unterscheidet.
+          Install-Module Pester -RequiredVersion $pesterVer `
+            -Force -SkipPublisherCheck -Scope CurrentUser
+
+      - name: Run unit tests (Pester, Tag 'Unit')
+        shell: ${{ matrix.shell }}
+        run: |
+          # Erzwinge die gepinnte Pester-Version - sonst greift auf PS 5.1
+          # das eingebaute Pester 3.4.0 statt der installierten 5.x.
+          $req = Import-PowerShellDataFile ./Tests/RequiredModules.psd1
+          $pesterVer = $req.Pester.RequiredVersion
+          Get-Module Pester | Remove-Module -Force -ErrorAction SilentlyContinue
+          Import-Module Pester -RequiredVersion $pesterVer -Force
+
+          $cfg = & ./Tests/pester.config.ps1 -Tag Unit -CodeCoverage
+          $cfg.Run.Exit = $true                  # Non-Zero-Exit-Code bei Fehlschlag = CI-Fail
+          $cfg.TestResult.Enabled = $true
+          $cfg.TestResult.OutputPath = './Tests/test-results.xml'
+          $cfg.TestResult.OutputFormat = 'NUnitXml'
+          Invoke-Pester -Configuration $cfg
+
+      - name: Upload coverage + test-results artefacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pester-${{ matrix.label }}
+          path: |
+            Tests/coverage.xml
+            Tests/test-results.xml
+          if-no-files-found: warn

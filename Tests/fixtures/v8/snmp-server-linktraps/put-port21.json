@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "uri": "snmp-server/traps/linktraps/21",
+    "method": "PUT",
+    "api_version": 8,
+    "status_code": 200,
+    "recorded_at": "2026-10-27",
+    "firmware": "ANONYMIZED",
+    "switch_model": "ANONYMIZED",
+    "anonymized": true,
+    "note": "PUT echoes the object (I37)."
+  },
+  "content": "{\"uri\":\"/snmp-server/traps/linktraps/21\",\"port_id\":\"21\",\"is_enabled\":false}"
+}

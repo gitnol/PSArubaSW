@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "uri": "management-user",
+    "method": "GET",
+    "api_version": 8,
+    "status_code": 200,
+    "recorded_at": "2026-10-27",
+    "firmware": "ANONYMIZED",
+    "switch_model": "ANONYMIZED",
+    "anonymized": true,
+    "note": "Real answer of a 2540 (I39): manager and operator."
+  },
+  "content": "{\"collection_result\":{\"total_elements_count\":2,\"filtered_elements_count\":2},\"device_management_user_element\":[{\"type\":\"UT_OPERATOR\",\"name\":\"viewer\",\"password\":\"******\",\"password_type\":\"PET_PLAIN_TEXT\",\"uri\":\"/management-user/UT_OPERATOR\"},{\"type\":\"UT_MANAGER\",\"name\":\"admin\",\"password\":\"******\",\"password_type\":\"PET_PLAIN_TEXT\",\"uri\":\"/management-user/UT_MANAGER\"}]}"
+}

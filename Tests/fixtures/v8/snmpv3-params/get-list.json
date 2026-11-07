@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "uri": "snmpv3/params",
+    "method": "GET",
+    "api_version": 8,
+    "status_code": 200,
+    "recorded_at": "2026-10-27",
+    "firmware": "ANONYMIZED",
+    "switch_model": "ANONYMIZED",
+    "anonymized": true,
+    "note": "Real answer of a 2540 (I37)."
+  },
+  "content": "{\"snmpv3_param_element\":[{\"uri\":\"/snmpv3/params/i36param\",\"parameter_name\":\"i36param\",\"snmpv3_message_processing_model_value\":\"SMPMV_VER2C\",\"user_name\":\"i36test\",\"snmpv3_authentication\":\"ATV_NOAUTH\",\"snmpv3_sec_model\":\"SSM_VER2C\"}],\"collection_result\":{\"total_elements_count\":1,\"filtered_elements_count\":1}}"
+}

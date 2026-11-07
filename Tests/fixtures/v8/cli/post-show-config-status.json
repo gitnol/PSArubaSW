@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "uri": "cli",
+    "method": "POST",
+    "api_version": 8,
+    "status_code": 200,
+    "recorded_at": "2026-10-28",
+    "firmware": "ANONYMIZED",
+    "switch_model": "ANONYMIZED",
+    "anonymized": true,
+    "note": "CLI command 'show config status' (I41)."
+  },
+  "content": "{\"uri\":\"/cli\",\"cmd\":\"show config status\",\"result_base64_encoded\":\"ClRoZSBydW5uaW5nIGNvbmZpZ3VyYXRpb24gbWF0Y2hlcyB0aGUgc2F2ZWQgY29uZmlndXJhdGlvbi4KCgA=\",\"status\":\"CCS_SUCCESS\",\"error_msg\":\"\"}"
+}

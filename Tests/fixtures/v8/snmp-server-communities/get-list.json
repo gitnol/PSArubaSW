@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "uri": "snmp-server/communities",
+    "method": "GET",
+    "api_version": 8,
+    "status_code": 200,
+    "recorded_at": "2026-10-27",
+    "firmware": "ANONYMIZED",
+    "switch_model": "ANONYMIZED",
+    "anonymized": true,
+    "note": "Real answer of a 2540 (I37)."
+  },
+  "content": "{\"snmp_server_community_element\":[{\"uri\":\"/snmp-server/communities/public\",\"community_name\":\"public\",\"access_type\":\"UT_MANAGER\",\"restricted\":false},{\"uri\":\"/snmp-server/communities/i36test\",\"community_name\":\"i36test\",\"access_type\":\"UT_OPERATOR\",\"restricted\":true}],\"collection_result\":{\"total_elements_count\":2,\"filtered_elements_count\":2}}"
+}

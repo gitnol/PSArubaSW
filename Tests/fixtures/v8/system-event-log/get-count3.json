@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "uri": "system-event-log",
+    "method": "GET",
+    "api_version": 8,
+    "status_code": 200,
+    "recorded_at": "2026-10-27",
+    "firmware": "ANONYMIZED",
+    "switch_model": "ANONYMIZED",
+    "anonymized": true,
+    "note": "Real answer of a 2540 (I36), three newest entries, serial number and addresses anonymized."
+  },
+  "content": "{\"collection_result\":{\"total_elements_count\":3,\"filtered_elements_count\":3},\"device_event_element\":[{\"serial_number\":\"ANONYMIZED\",\"event_type\":\"EVENT_SYSLOG\",\"syslog_message\":\"<14>Oct 27 19:37:44 - 05005 http: User 'admin' is logged in from REST.\",\"event_data\":{\"event_id\":\"EVENT_AUTH_REST_USER_LOGIN\",\"severity\":\"INFO\",\"system_module\":\"HTTP\",\"date_time\":{\"seconds_since_unix_epoch\":1793129864}}},{\"serial_number\":\"ANONYMIZED\",\"event_type\":\"EVENT_SYSLOG\",\"syslog_message\":\"<14>Oct 27 19:37:19 - 05006 http: User 'admin' is logged out from REST.\",\"event_data\":{\"event_id\":\"EVENT_AUTH_REST_USER_LOGOUT\",\"severity\":\"INFO\",\"system_module\":\"HTTP\",\"date_time\":{\"seconds_since_unix_epoch\":1793129839}}},{\"serial_number\":\"ANONYMIZED\",\"event_type\":\"EVENT_SYSLOG\",\"syslog_message\":\"<14>Oct 27 19:37:16 - 03125 mgr: Startup configuration changed by SNMP. New seq. number 607\",\"event_data\":{\"event_id\":\"EVENT_STARTUP_CONFIG_CHANGED\",\"severity\":\"INFO\",\"system_module\":\"MGR\",\"date_time\":{\"seconds_since_unix_epoch\":1793129836}}}]}"
+}

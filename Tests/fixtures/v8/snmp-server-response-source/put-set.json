@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "uri": "snmp-server/response-source",
+    "method": "PUT",
+    "api_version": 8,
+    "status_code": 200,
+    "recorded_at": "2026-10-27",
+    "firmware": "ANONYMIZED",
+    "switch_model": "ANONYMIZED",
+    "anonymized": true,
+    "note": "PUT echoes the object (I37, RSIP_LOOPBACK)."
+  },
+  "content": "{\"uri\":\"/snmp-server/response-source\",\"rs_ip_policy\":\"RSIP_LOOPBACK\",\"loopback_interface\":1,\"ip_addr\":null}"
+}

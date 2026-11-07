@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "uri": "dot1x/authenticator",
+    "method": "GET",
+    "api_version": 8,
+    "status_code": 200,
+    "recorded_at": "2026-10-27",
+    "firmware": "ANONYMIZED",
+    "switch_model": "ANONYMIZED",
+    "anonymized": true,
+    "note": "Real answer, list cut to two ports (I36)."
+  },
+  "content": "{\"dot1x_authenticator_port_element\":[{\"uri\":\"/dot1x/authenticator/1\",\"port_id\":\"1\",\"is_authenticator_enabled\":false,\"control\":\"DAPC_AUTO\",\"unauthorized_vlan_id\":0,\"client_limit\":0,\"quiet_period\":60,\"tx_period\":30,\"supplicant_timeout\":30,\"server_timeout\":300,\"max_requests\":2,\"reauth_period\":0,\"authorized_vlan_id\":0,\"logoff_period\":300,\"unauth_period\":0,\"cached_reauth_period\":0},{\"uri\":\"/dot1x/authenticator/2\",\"port_id\":\"2\",\"is_authenticator_enabled\":false,\"control\":\"DAPC_AUTO\",\"unauthorized_vlan_id\":0,\"client_limit\":0,\"quiet_period\":60,\"tx_period\":30,\"supplicant_timeout\":30,\"server_timeout\":300,\"max_requests\":2,\"reauth_period\":0,\"authorized_vlan_id\":0,\"logoff_period\":300,\"unauth_period\":0,\"cached_reauth_period\":0}],\"collection_result\":{\"total_elements_count\":52,\"filtered_elements_count\":52}}"
+}

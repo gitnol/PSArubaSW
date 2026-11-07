@@ -1,0 +1,42 @@
+# PowerArubaSW – .gitignore (Stack: powershell-automation)
+
+# Sensible Test-/Laufzeitdateien — NIEMALS committen
+# credential.ps1 enthält das administrative Switch-Passwort im Klartext.
+Tests/credential.ps1
+config.ps1
+*.secret
+
+# Logs / temporäre Dateien
+*.log
+*.tmp
+
+# Pester / Test-Artefakte (per-run, gehoeren nie ins Repo)
+Tests/coverage.xml
+Tests/test-results.xml
+
+# Python-Caches
+__pycache__/
+*.pyc
+
+# HPE/Aruba-Referenz-PDFs (urheberrechtlich geschuetzt; lokal als Referenz
+# fuer Schema-Pflege/Refresh, nicht ins Repo). Erweitert in I12 um die
+# 'Aruba REST API for AOS-S'-Naming-Variante (z.B. 16.11).
+HPE_*.pdf
+*HPE_*Reference*.pdf
+Aruba REST API*.pdf
+*Aruba*REST*API*.pdf
+
+# PowerShell-Modul-/Build-Artefakte
+*.nupkg
+output/
+bin/
+obj/
+
+# Editor / OS
+.vs/
+*.suo
+Thumbs.db
+.DS_Store
+
+# Lokal erzeugte OpenAPI-Spec (abgeleitet aus HPE-Dokumenten, siehe Tests/schema/README.md)
+Tests/schema/openapi.yaml

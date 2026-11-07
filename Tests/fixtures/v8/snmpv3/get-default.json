@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "uri": "snmpv3",
+    "method": "GET",
+    "api_version": 8,
+    "status_code": 200,
+    "recorded_at": "2026-10-27",
+    "firmware": "ANONYMIZED",
+    "switch_model": "ANONYMIZED",
+    "anonymized": true,
+    "note": "Real answer of a 2540 (I37)."
+  },
+  "content": "{\"uri\":\"/snmpv3\",\"is_snmpv3_server_enabled\":false,\"is_non_snmpv3_access_readonly\":false,\"is_snmpv3_messages_only\":false}"
+}

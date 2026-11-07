@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "uri": "mstp",
+    "method": "PUT",
+    "api_version": 8,
+    "status_code": 200,
+    "recorded_at": "2026-06-01",
+    "firmware": "ANONYMIZED",
+    "switch_model": "ANONYMIZED",
+    "anonymized": true,
+    "note": "Hand-crafted starter fixture (I20). PUT echoes enabled+region."
+  },
+  "content": "{\"is_mstp_enabled\":true,\"region_name\":\"CORE\",\"region_revision\":1,\"max_hops\":20}"
+}

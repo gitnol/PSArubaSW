@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "uri": "any",
+    "method": "any",
+    "api_version": 8,
+    "status_code": 401,
+    "recorded_at": "2026-05-27",
+    "firmware": "ANONYMIZED",
+    "switch_model": "ANONYMIZED",
+    "anonymized": true,
+    "note": "Generischer 401-Body, wie ihn der ArubaOS-Switch bei abgelaufenem/ungültigem Cookie zurueckgibt."
+  },
+  "content": "{\"message\":\"Authentication failed for user / Invalid session\"}"
+}

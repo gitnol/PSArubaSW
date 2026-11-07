@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "uri": "system/time",
+    "method": "PUT",
+    "api_version": 8,
+    "status_code": 200,
+    "recorded_at": "2026-10-27",
+    "firmware": "ANONYMIZED",
+    "switch_model": "ANONYMIZED",
+    "anonymized": true,
+    "note": "PUT echoes the config (recorded on a test switch with offset 0; offset changed by hand)."
+  },
+  "content": "{\"uri\":\"/system/time\",\"local_utc_offset_in_seconds\":7200,\"auto_adjust_dst\":false,\"time_servers\":[],\"use_sntp_unicast\":false,\"time_server_protocol\":\"TSP_NTP\"}"
+}

@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "uri": "system",
+    "method": "GET",
+    "api_version": 8,
+    "status_code": 200,
+    "recorded_at": "2026-05-27",
+    "firmware": "ANONYMIZED",
+    "switch_model": "ANONYMIZED",
+    "anonymized": true,
+    "note": "Hand-crafted starter fixture. Hostname/Location/Contact sind generisch."
+  },
+  "content": "{\"name\":\"test-switch\",\"location\":\"lab\",\"contact\":\"admin@example.com\",\"device_uptime\":1234567,\"current_system_time\":\"2026-05-27T10:00:00Z\"}"
+}

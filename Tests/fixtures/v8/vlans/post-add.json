@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "uri": "vlans",
+    "method": "POST",
+    "api_version": 8,
+    "status_code": 201,
+    "recorded_at": "2026-05-27",
+    "firmware": "ANONYMIZED",
+    "switch_model": "ANONYMIZED",
+    "anonymized": true,
+    "note": "Add-ArubaSWVlans response: switch echoes the created VLAN object."
+  },
+  "content": "{\"uri\":\"/vlans/85\",\"vlan_id\":85,\"name\":\"PowerArubaSW\",\"status\":\"VS_PORT_BASED\",\"type\":\"VT_STATIC\",\"is_voice_enabled\":false,\"is_jumbo_enabled\":false,\"is_dsnoop_enabled\":false,\"is_management_vlan\":false}"
+}

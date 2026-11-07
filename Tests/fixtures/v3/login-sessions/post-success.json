@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "uri": "login-sessions",
+    "method": "POST",
+    "api_version": 3,
+    "status_code": 201,
+    "recorded_at": "2026-05-27",
+    "firmware": "ANONYMIZED",
+    "switch_model": "ANONYMIZED",
+    "anonymized": true,
+    "note": "Login response. cookie ist ANONYMIZED — keine echten Session-IDs ins Repo."
+  },
+  "content": "{\"uri\":\"/login-sessions\",\"cookie\":\"sessionId=ANONYMIZED-SESSION-ID-NOT-A-REAL-COOKIE\"}"
+}

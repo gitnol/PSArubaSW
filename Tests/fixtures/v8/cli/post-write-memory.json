@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "uri": "cli",
+    "method": "POST",
+    "api_version": 8,
+    "status_code": 200,
+    "recorded_at": "2026-10-28",
+    "firmware": "ANONYMIZED",
+    "switch_model": "ANONYMIZED",
+    "anonymized": true,
+    "note": "CLI command 'write memory' (I41)."
+  },
+  "content": "{\"uri\":\"/cli\",\"cmd\":\"write memory\",\"result_base64_encoded\":\"\",\"status\":\"CCS_SUCCESS\",\"error_msg\":\"\"}"
+}
