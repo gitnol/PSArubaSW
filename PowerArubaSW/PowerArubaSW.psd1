@@ -314,7 +314,7 @@
             ProjectUri = 'https://github.com/gitnol/PSArubaSW'
 
             # A URL to an icon representing this module.
-            IconUri    = 'https://raw.githubusercontent.com/PowerAruba/PowerArubaSW/master/Medias/PowerArubaSW.png'
+            IconUri    = 'https://raw.githubusercontent.com/gitnol/PSArubaSW/master/Medias/PSArubaSW.png'
 
             # ReleaseNotes of this module
             # ReleaseNotes = ''
