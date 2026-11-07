@@ -1,7 +1,7 @@
 name: Tests
 
 # Hardware-freie Unit-Tests laufen bei jedem Pull-Request gegen eine
-# Matrix aus Windows-PS7, Windows-PS5.1 und Ubuntu-PS7. Die bestehenden
+# Matrix aus Windows-PS7 und Ubuntu-PS7 (Windows PowerShell 5.1 ist derzeit nicht abgedeckt). Die bestehenden
 # Integrationstests (Tests/integration/*.Tests.ps1, Pester-Tag 'Integration')
 # benoetigen einen echten ArubaOS-Switch und werden hier bewusst NICHT
 # ausgefuehrt.
@@ -27,9 +27,6 @@ jobs:
           - os: windows-latest
             shell: pwsh         # PowerShell 7+
             label: win-ps7
-          - os: windows-latest
-            shell: powershell   # Windows PowerShell 5.1
-            label: win-ps51
           - os: ubuntu-latest
             shell: pwsh
             label: linux-ps7
