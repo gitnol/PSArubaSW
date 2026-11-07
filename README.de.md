@@ -96,18 +96,29 @@ rest-interface
 write memory
 ```
 
-### Schritt 2: Modul holen
+### Schritt 2: Modul installieren
+
+Diese Version steht **nicht** in der PowerShell Gallery (dort würde `Install-Module PowerArubaSW` das Originalprojekt installieren). Sie installieren sie aus diesem Repository:
 
 ```powershell
 git clone https://github.com/gitnol/PSArubaSW.git
 cd PSArubaSW
-Import-Module ./PowerArubaSW/PowerArubaSW.psd1
+
+# Modul in Ihren persönlichen Modulordner kopieren (erster Eintrag von PSModulePath), damit es künftig mit dem Namen importierbar ist
+$target = Join-Path ($env:PSModulePath -split [IO.Path]::PathSeparator)[0] 'PowerArubaSW'
+New-Item -ItemType Directory -Path $target -Force | Out-Null
+Copy-Item ./PowerArubaSW/* $target -Recurse -Force
+
+Import-Module PowerArubaSW
 ```
+
+Zum **Aktualisieren** später: `git pull`, dann die Zeilen mit `New-Item` und `Copy-Item` wiederholen.
+Wer nichts kopieren möchte, lädt das Modul direkt aus dem Klon: `Import-Module ./PowerArubaSW/PowerArubaSW.psd1`.
 
 > [!NOTE]
 > Das Repository heißt **PSArubaSW**, das PowerShell-Modul darin heißt **PowerArubaSW**
 > (der Name bleibt, damit vorhandene Skripte weiter laufen). Alle Befehle enthalten `ArubaSW`.
-> Führen Sie nicht `Install-Module PowerArubaSW` aus: Das würde das Originalprojekt aus der PowerShell Gallery installieren, nicht diese Version.
+> Falls Sie früher das Original aus der PowerShell Gallery installiert haben, entfernen Sie es zuerst (`Uninstall-Module PowerArubaSW`), damit beide nicht durcheinandergeraten.
 
 Prüfen, ob es geladen ist:
 
