@@ -48,13 +48,13 @@ For example, you can manage Vlans with the following commands:
 
 # Requirements
 
-- Powershell 5 or 6 (Core) (If possible get the latest version)
+- PowerShell 7 or later (Windows PowerShell 5.1 is not covered by the automated tests and is untested)
 - An Aruba OS Switch (with firmware 16.x), REST API enable and HTTPS enable (recommended)
 
 # Instructions
 ### Install the module
 ```powershell
-# Automated installation (Powershell 5 or later):
+# Automated installation (PowerShell 7 or later):
     Install-Module PowerArubaSW
 
 # Import the module
